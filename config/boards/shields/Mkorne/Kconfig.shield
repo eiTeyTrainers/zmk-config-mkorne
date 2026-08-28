@@ -1,0 +1,5 @@
+config SHIELD_MKORNE_LEFT
+    def_bool $(shields_list_contains,Mkorne_left)
+
+config SHIELD_MKORNE_RIGHT
+    def_bool $(shields_list_contains,Mkorne_right)

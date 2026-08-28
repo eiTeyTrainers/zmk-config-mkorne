@@ -1,0 +1,3905 @@
+Folder PATH listing
+Volume serial number is BC27-A341
+C:.
+|   .gitignore
+|   build.yaml
+|   folder_structure.txt
+|   
++---.github
+|   \---workflows
+|           build.yml
+|           
++---.zmk
+|   +---.west
+|   |       config
+|   |       
+|   +---config
+|   |       west.yml
+|   |       
+|   \---zmk
+|       |   .clang-format
+|       |   .gitattributes
+|       |   .gitignore
+|       |   .gitlint
+|       |   .pre-commit-config.yaml
+|       |   .release-please-manifest.json
+|       |   AUTHORS
+|       |   CHANGELOG.md
+|       |   CODEOWNERS
+|       |   CODE_OF_CONDUCT.md
+|       |   CONTRIBUTING.md
+|       |   LICENSE
+|       |   README.md
+|       |   release-please-config.json
+|       |   
+|       +---.devcontainer
+|       |       .bashrc
+|       |       devcontainer.json
+|       |       Dockerfile
+|       |       
+|       +---.github
+|       |   |   dependabot.yml
+|       |   |   pull_request_template.md
+|       |   |   
+|       |   \---workflows
+|       |           ble-test.yml
+|       |           build-user-config.yml
+|       |           build.yml
+|       |           doc-checks.yml
+|       |           hardware-metadata-validation.yml
+|       |           pre-commit.yml
+|       |           release-please.yml
+|       |           stale.yml
+|       |           test.yml
+|       |           
+|       +---.vscode
+|       |       extensions.json
+|       |       settings.json
+|       |       tasks.json
+|       |       
+|       +---app
+|       |   |   .gitignore
+|       |   |   .prettierrc.js
+|       |   |   CMakeLists.txt
+|       |   |   core-coverage.yml
+|       |   |   Kconfig
+|       |   |   Kconfig.behaviors
+|       |   |   Kconfig.defaults
+|       |   |   package-lock.json
+|       |   |   package.json
+|       |   |   prj.conf
+|       |   |   run-ble-test.sh
+|       |   |   run-test.sh
+|       |   |   VERSION
+|       |   |   west.yml
+|       |   |   
+|       |   +---boards
+|       |   |   |   01space_rp2040_042lcd.conf
+|       |   |   |   01space_rp2040_042lcd.overlay
+|       |   |   |   adafruit_kb2040.conf
+|       |   |   |   adafruit_kb2040.overlay
+|       |   |   |   adafruit_qt_py_rp2040.conf
+|       |   |   |   adafruit_qt_py_rp2040.overlay
+|       |   |   |   aliases.cmake
+|       |   |   |   blackpill_f401cc.conf
+|       |   |   |   blackpill_f401cc.overlay
+|       |   |   |   blackpill_f401ce.conf
+|       |   |   |   blackpill_f401ce.overlay
+|       |   |   |   blackpill_f411ce.conf
+|       |   |   |   blackpill_f411ce.overlay
+|       |   |   |   boardsource_blok.conf
+|       |   |   |   boardsource_blok.overlay
+|       |   |   |   Kconfig
+|       |   |   |   native_posix.conf
+|       |   |   |   native_posix.overlay
+|       |   |   |   native_posix_64.conf
+|       |   |   |   native_posix_64.overlay
+|       |   |   |   nrf52840dk_nrf52840.conf
+|       |   |   |   nrf52_bsim.conf
+|       |   |   |   nrf52_bsim.overlay
+|       |   |   |   nrf5340dk_nrf5340_cpuapp.conf
+|       |   |   |   nrf5340dk_nrf5340_cpuapp.overlay
+|       |   |   |   rpi_pico.conf
+|       |   |   |   seeeduino_xiao.conf
+|       |   |   |   seeeduino_xiao_ble.conf
+|       |   |   |   seeeduino_xiao_ble.overlay
+|       |   |   |   seeeduino_xiao_rp2040.conf
+|       |   |   |   seeeduino_xiao_rp2040.overlay
+|       |   |   |   sparkfun_pro_micro_rp2040.conf
+|       |   |   |   sparkfun_pro_micro_rp2040.overlay
+|       |   |   |   
+|       |   |   +---arm
+|       |   |   |   +---adafruit_kb2040
+|       |   |   |   |       adafruit_kb2040.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---adafruit_qt_py_rp2040
+|       |   |   |   |       adafruit_qt_py_rp2040.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---adv360pro
+|       |   |   |   |       adv360pro-layouts.dtsi
+|       |   |   |   |       adv360pro-pinctrl.dtsi
+|       |   |   |   |       adv360pro.dtsi
+|       |   |   |   |       adv360pro.keymap
+|       |   |   |   |       adv360pro.yaml
+|       |   |   |   |       adv360pro.zmk.yml
+|       |   |   |   |       adv360pro_left.dts
+|       |   |   |   |       adv360pro_left_defconfig
+|       |   |   |   |       adv360pro_right.dts
+|       |   |   |   |       adv360pro_right_defconfig
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       README.md
+|       |   |   |   |       
+|       |   |   |   +---bdn9
+|       |   |   |   |       bdn9_rev2-layouts.dtsi
+|       |   |   |   |       bdn9_rev2.conf
+|       |   |   |   |       bdn9_rev2.dts
+|       |   |   |   |       bdn9_rev2.keymap
+|       |   |   |   |       bdn9_rev2.yaml
+|       |   |   |   |       bdn9_rev2.yml
+|       |   |   |   |       bdn9_rev2.zmk.yml
+|       |   |   |   |       bdn9_rev2_defconfig
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       README.md
+|       |   |   |   |       
+|       |   |   |   +---blackpill_f401cc
+|       |   |   |   |       blackpill_f401cc.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---blackpill_f401ce
+|       |   |   |   |       blackpill_f401ce.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---blackpill_f411ce
+|       |   |   |   |       blackpill_f411ce.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---bluemicro840
+|       |   |   |   |       arduino_pro_micro_pins.dtsi
+|       |   |   |   |       bluemicro840_v1-pinctrl.dtsi
+|       |   |   |   |       bluemicro840_v1.dts
+|       |   |   |   |       bluemicro840_v1.yaml
+|       |   |   |   |       bluemicro840_v1.zmk.yml
+|       |   |   |   |       bluemicro840_v1_defconfig
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---boardsource_blok
+|       |   |   |   |       boardsource_blok.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---bt60
+|       |   |   |   |       board.cmake
+|       |   |   |   |       bt60.dtsi
+|       |   |   |   |       bt60_v1.dts
+|       |   |   |   |       bt60_v1.keymap
+|       |   |   |   |       bt60_v1.yaml
+|       |   |   |   |       bt60_v1.zmk.yml
+|       |   |   |   |       bt60_v1_defconfig
+|       |   |   |   |       bt60_v1_hs.dts
+|       |   |   |   |       bt60_v1_hs.keymap
+|       |   |   |   |       bt60_v1_hs.yaml
+|       |   |   |   |       bt60_v1_hs.zmk.yml
+|       |   |   |   |       bt60_v1_hs_defconfig
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---ckp
+|       |   |   |   |       board.cmake
+|       |   |   |   |       bt60_v2.dts
+|       |   |   |   |       bt60_v2.keymap
+|       |   |   |   |       bt60_v2.yaml
+|       |   |   |   |       bt60_v2.zmk.yml
+|       |   |   |   |       bt60_v2_defconfig
+|       |   |   |   |       bt65_v1.dts
+|       |   |   |   |       bt65_v1.keymap
+|       |   |   |   |       bt65_v1.yaml
+|       |   |   |   |       bt65_v1.zmk.yml
+|       |   |   |   |       bt65_v1_defconfig
+|       |   |   |   |       bt75_v1.dts
+|       |   |   |   |       bt75_v1.keymap
+|       |   |   |   |       bt75_v1.yaml
+|       |   |   |   |       bt75_v1.zmk.yml
+|       |   |   |   |       bt75_v1_defconfig
+|       |   |   |   |       ckp-pinctrl.dtsi
+|       |   |   |   |       ckp.dtsi
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---corneish_zen
+|       |   |   |   |   |   board.cmake
+|       |   |   |   |   |   CMakeLists.txt
+|       |   |   |   |   |   corneish_zen.conf
+|       |   |   |   |   |   corneish_zen.dtsi
+|       |   |   |   |   |   corneish_zen.keymap
+|       |   |   |   |   |   corneish_zen.yaml
+|       |   |   |   |   |   corneish_zen_v1.zmk.yml
+|       |   |   |   |   |   corneish_zen_v1_left.dts
+|       |   |   |   |   |   corneish_zen_v1_left_defconfig
+|       |   |   |   |   |   corneish_zen_v1_right.dts
+|       |   |   |   |   |   corneish_zen_v1_right_defconfig
+|       |   |   |   |   |   corneish_zen_v2.yaml
+|       |   |   |   |   |   corneish_zen_v2.zmk.yml
+|       |   |   |   |   |   corneish_zen_v2_left.dts
+|       |   |   |   |   |   corneish_zen_v2_left_defconfig
+|       |   |   |   |   |   corneish_zen_v2_right.dts
+|       |   |   |   |   |   corneish_zen_v2_right_defconfig
+|       |   |   |   |   |   custom_status_screen.c
+|       |   |   |   |   |   custom_status_screen.h
+|       |   |   |   |   |   Kconfig
+|       |   |   |   |   |   Kconfig.board
+|       |   |   |   |   |   Kconfig.defconfig
+|       |   |   |   |   |   pre_dt_board.cmake
+|       |   |   |   |   |   
+|       |   |   |   |   \---widgets
+|       |   |   |   |       |   battery_status.c
+|       |   |   |   |       |   battery_status.h
+|       |   |   |   |       |   layer_status.c
+|       |   |   |   |       |   layer_status.h
+|       |   |   |   |       |   output_status.c
+|       |   |   |   |       |   output_status.h
+|       |   |   |   |       |   peripheral_status.c
+|       |   |   |   |       |   peripheral_status.h
+|       |   |   |   |       |   
+|       |   |   |   |       \---icons
+|       |   |   |   |               batt_0.c
+|       |   |   |   |               batt_0_chg.c
+|       |   |   |   |               batt_100.c
+|       |   |   |   |               batt_100_chg.c
+|       |   |   |   |               batt_25.c
+|       |   |   |   |               batt_25_chg.c
+|       |   |   |   |               batt_5.c
+|       |   |   |   |               batt_50.c
+|       |   |   |   |               batt_50_chg.c
+|       |   |   |   |               batt_5_chg.c
+|       |   |   |   |               batt_75.c
+|       |   |   |   |               batt_75_chg.c
+|       |   |   |   |               bluetooth_advertising.c
+|       |   |   |   |               bluetooth_advertising_1.c
+|       |   |   |   |               bluetooth_advertising_2.c
+|       |   |   |   |               bluetooth_advertising_3.c
+|       |   |   |   |               bluetooth_advertising_4.c
+|       |   |   |   |               bluetooth_advertising_5.c
+|       |   |   |   |               bluetooth_connected_1.c
+|       |   |   |   |               bluetooth_connected_2.c
+|       |   |   |   |               bluetooth_connected_3.c
+|       |   |   |   |               bluetooth_connected_4.c
+|       |   |   |   |               bluetooth_connected_5.c
+|       |   |   |   |               bluetooth_connected_right.c
+|       |   |   |   |               bluetooth_disconnected_right.c
+|       |   |   |   |               CMakeLists.txt
+|       |   |   |   |               layers.c
+|       |   |   |   |               layers2.c
+|       |   |   |   |               USB_connected.c
+|       |   |   |   |               zenlogo.c
+|       |   |   |   |               
+|       |   |   |   +---dz60rgb
+|       |   |   |   |       board.cmake
+|       |   |   |   |       dz60rgb_rev1.dts
+|       |   |   |   |       dz60rgb_rev1.keymap
+|       |   |   |   |       dz60rgb_rev1.yaml
+|       |   |   |   |       dz60rgb_rev1_defconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       
+|       |   |   |   +---ferris
+|       |   |   |   |       board.cmake
+|       |   |   |   |       ferris_rev02.dts
+|       |   |   |   |       ferris_rev02.keymap
+|       |   |   |   |       ferris_rev02.yaml
+|       |   |   |   |       ferris_rev02.zmk.yml
+|       |   |   |   |       ferris_rev02_defconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       README.md
+|       |   |   |   |       
+|       |   |   |   +---glove80
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       glove80-layouts.dtsi
+|       |   |   |   |       glove80.dtsi
+|       |   |   |   |       glove80.keymap
+|       |   |   |   |       glove80.yaml
+|       |   |   |   |       glove80.zmk.yml
+|       |   |   |   |       glove80_lh-pinctrl.dtsi
+|       |   |   |   |       glove80_lh.dts
+|       |   |   |   |       glove80_lh.keymap
+|       |   |   |   |       glove80_lh_defconfig
+|       |   |   |   |       glove80_rh-pinctrl.dtsi
+|       |   |   |   |       glove80_rh.dts
+|       |   |   |   |       glove80_rh.keymap
+|       |   |   |   |       glove80_rh_defconfig
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       readme.md
+|       |   |   |   |       usb_serial_number.c
+|       |   |   |   |       
+|       |   |   |   +---kbdfans_tofu65
+|       |   |   |   |       kbdfans_tofu65_v2.dts
+|       |   |   |   |       kbdfans_tofu65_v2.keymap
+|       |   |   |   |       kbdfans_tofu65_v2.yaml
+|       |   |   |   |       kbdfans_tofu65_v2.zmk.yml
+|       |   |   |   |       kbdfans_tofu65_v2_defconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       
+|       |   |   |   +---mikoto
+|       |   |   |   |       arduino_pro_micro_pins_v5.dtsi
+|       |   |   |   |       arduino_pro_micro_pins_v6.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       mikoto-pinctrl.dtsi
+|       |   |   |   |       mikoto.dts
+|       |   |   |   |       mikoto.yaml
+|       |   |   |   |       mikoto.zmk.yml
+|       |   |   |   |       mikoto_5_20_0.overlay
+|       |   |   |   |       mikoto_6_1_0.overlay
+|       |   |   |   |       mikoto_7_2_0.conf
+|       |   |   |   |       mikoto_7_2_0.overlay
+|       |   |   |   |       mikoto_defconfig
+|       |   |   |   |       pinmux.c
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       revision.cmake
+|       |   |   |   |       
+|       |   |   |   +---nice60
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       nice60-pinctrl.dtsi
+|       |   |   |   |       nice60.dts
+|       |   |   |   |       nice60.keymap
+|       |   |   |   |       nice60.yaml
+|       |   |   |   |       nice60.zmk.yml
+|       |   |   |   |       nice60_defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       README.md
+|       |   |   |   |       
+|       |   |   |   +---nice_nano
+|       |   |   |   |       arduino_pro_micro_pins.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       nice_nano-pinctrl.dtsi
+|       |   |   |   |       nice_nano.dts
+|       |   |   |   |       nice_nano.dtsi
+|       |   |   |   |       nice_nano.yaml
+|       |   |   |   |       nice_nano.zmk.yml
+|       |   |   |   |       nice_nano_defconfig
+|       |   |   |   |       nice_nano_v2.dts
+|       |   |   |   |       nice_nano_v2.yaml
+|       |   |   |   |       nice_nano_v2.zmk.yml
+|       |   |   |   |       nice_nano_v2_defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---nrf52840dk_nrf52840
+|       |   |   |   |       nrf52840dk_nrf52840.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---nrf52840_m2
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       nrf52840_m2.dts
+|       |   |   |   |       nrf52840_m2.yaml
+|       |   |   |   |       nrf52840_m2.zmk.yml
+|       |   |   |   |       nrf52840_m2_defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---nrf5340dk_nrf5340_cpuapp
+|       |   |   |   |       nrf5340dk_nrf5340_cpuapp.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---nrfmicro
+|       |   |   |   |       arduino_pro_micro_pins.dtsi
+|       |   |   |   |       arduino_pro_micro_pins_52833.dtsi
+|       |   |   |   |       arduino_pro_micro_pins_flipped.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       nrfmicro-flipped-pinctrl.dtsi
+|       |   |   |   |       nrfmicro-pinctrl.dtsi
+|       |   |   |   |       nrfmicro_11.dts
+|       |   |   |   |       nrfmicro_11.yaml
+|       |   |   |   |       nrfmicro_11.zmk.yml
+|       |   |   |   |       nrfmicro_11_defconfig
+|       |   |   |   |       nrfmicro_11_flipped.dts
+|       |   |   |   |       nrfmicro_11_flipped.yaml
+|       |   |   |   |       nrfmicro_11_flipped.zmk.yml
+|       |   |   |   |       nrfmicro_11_flipped_defconfig
+|       |   |   |   |       nrfmicro_13.dts
+|       |   |   |   |       nrfmicro_13.yaml
+|       |   |   |   |       nrfmicro_13.zmk.yml
+|       |   |   |   |       nrfmicro_13_52833.dts
+|       |   |   |   |       nrfmicro_13_52833.yaml
+|       |   |   |   |       nrfmicro_13_52833.zmk.yml
+|       |   |   |   |       nrfmicro_13_52833_defconfig
+|       |   |   |   |       nrfmicro_13_defconfig
+|       |   |   |   |       pinmux.c
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---pillbug
+|       |   |   |   |       blackpill_pins.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pillbug-pinctrl.dtsi
+|       |   |   |   |       pillbug.dts
+|       |   |   |   |       pillbug.yaml
+|       |   |   |   |       pillbug.zmk.yml
+|       |   |   |   |       pillbug_defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       
+|       |   |   |   +---planck
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       planck_rev6.dts
+|       |   |   |   |       planck_rev6.keymap
+|       |   |   |   |       planck_rev6.yaml
+|       |   |   |   |       planck_rev6.zmk.yml
+|       |   |   |   |       planck_rev6_defconfig
+|       |   |   |   |       
+|       |   |   |   +---preonic
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       preonic_rev3.dts
+|       |   |   |   |       preonic_rev3.keymap
+|       |   |   |   |       preonic_rev3.yaml
+|       |   |   |   |       preonic_rev3.zmk.yml
+|       |   |   |   |       preonic_rev3_defconfig
+|       |   |   |   |       
+|       |   |   |   +---proton_c
+|       |   |   |   |       arduino_pro_micro_pins.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       proton_c.dts
+|       |   |   |   |       proton_c.yaml
+|       |   |   |   |       proton_c.zmk.yml
+|       |   |   |   |       proton_c_defconfig
+|       |   |   |   |       
+|       |   |   |   +---puchi_ble
+|       |   |   |   |       arduino_pro_micro_pins.dtsi
+|       |   |   |   |       board.cmake
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pinmux.c
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       puchi_ble_v1-pinctrl.dtsi
+|       |   |   |   |       puchi_ble_v1.dts
+|       |   |   |   |       puchi_ble_v1.yaml
+|       |   |   |   |       puchi_ble_v1.zmk.yml
+|       |   |   |   |       puchi_ble_v1_defconfig
+|       |   |   |   |       
+|       |   |   |   +---s40nc
+|       |   |   |   |       board.cmake
+|       |   |   |   |       Kconfig.board
+|       |   |   |   |       Kconfig.defconfig
+|       |   |   |   |       pre_dt_board.cmake
+|       |   |   |   |       README.md
+|       |   |   |   |       s40nc.dts
+|       |   |   |   |       s40nc.keymap
+|       |   |   |   |       s40nc.yaml
+|       |   |   |   |       s40nc.zmk.yml
+|       |   |   |   |       s40nc_defconfig
+|       |   |   |   |       
+|       |   |   |   +---seeeduino_xiao
+|       |   |   |   |       seeeduino_xiao.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---seeeduino_xiao_ble
+|       |   |   |   |       seeeduino_xiao_ble.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---seeeduino_xiao_rp2040
+|       |   |   |   |       seeeduino_xiao_rp2040.zmk.yml
+|       |   |   |   |       
+|       |   |   |   \---sparkfun_pro_micro_rp2040
+|       |   |   |           sparkfun_pro_micro_rp2040.zmk.yml
+|       |   |   |           
+|       |   |   +---interconnects
+|       |   |   |   +---arduino_uno
+|       |   |   |   |       arduino_uno.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---blackpill
+|       |   |   |   |       blackpill.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---makerdiary_nrf52840_m2
+|       |   |   |   |       makerdiary_nrf52840_m2.zmk.yml
+|       |   |   |   |       
+|       |   |   |   +---pro_micro
+|       |   |   |   |       pro_micro.zmk.yml
+|       |   |   |   |       
+|       |   |   |   \---seeed_xiao
+|       |   |   |           seeed_xiao.zmk.yml
+|       |   |   |           
+|       |   |   \---shields
+|       |   |       +---a_dux
+|       |   |       |       a_dux-layouts.dtsi
+|       |   |       |       a_dux.conf
+|       |   |       |       a_dux.dtsi
+|       |   |       |       a_dux.keymap
+|       |   |       |       a_dux.zmk.yml
+|       |   |       |       a_dux_left.overlay
+|       |   |       |       a_dux_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---bat43
+|       |   |       |       bat43.keymap
+|       |   |       |       bat43.overlay
+|       |   |       |       bat43.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---bfo9000
+|       |   |       |       bfo9000.conf
+|       |   |       |       bfo9000.dtsi
+|       |   |       |       bfo9000.keymap
+|       |   |       |       bfo9000.zmk.yml
+|       |   |       |       bfo9000_left.conf
+|       |   |       |       bfo9000_left.overlay
+|       |   |       |       bfo9000_right.conf
+|       |   |       |       bfo9000_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---boardsource3x4
+|       |   |       |       boardsource3x4.conf
+|       |   |       |       boardsource3x4.keymap
+|       |   |       |       boardsource3x4.overlay
+|       |   |       |       boardsource3x4.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---boardsource5x12
+|       |   |       |       boardsource5x12.conf
+|       |   |       |       boardsource5x12.keymap
+|       |   |       |       boardsource5x12.overlay
+|       |   |       |       boardsource5x12.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---chalice
+|       |   |       |   |   chalice.conf
+|       |   |       |   |   chalice.keymap
+|       |   |       |   |   chalice.overlay
+|       |   |       |   |   chalice.zmk.yml
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---clog
+|       |   |       |       clog.conf
+|       |   |       |       clog.dtsi
+|       |   |       |       clog.keymap
+|       |   |       |       clog.zmk.yml
+|       |   |       |       clog_left.overlay
+|       |   |       |       clog_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---clueboard_california
+|       |   |       |       clueboard_california.conf
+|       |   |       |       clueboard_california.keymap
+|       |   |       |       clueboard_california.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---contra
+|       |   |       |       contra.conf
+|       |   |       |       contra.keymap
+|       |   |       |       contra.overlay
+|       |   |       |       contra.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---corne
+|       |   |       |   |   corne.conf
+|       |   |       |   |   corne.dtsi
+|       |   |       |   |   corne.keymap
+|       |   |       |   |   corne.zmk.yml
+|       |   |       |   |   corne_left.conf
+|       |   |       |   |   corne_left.overlay
+|       |   |       |   |   corne_right.conf
+|       |   |       |   |   corne_right.overlay
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---cradio
+|       |   |       |       cradio.conf
+|       |   |       |       cradio.dtsi
+|       |   |       |       cradio.keymap
+|       |   |       |       cradio.zmk.yml
+|       |   |       |       cradio_left.conf
+|       |   |       |       cradio_left.overlay
+|       |   |       |       cradio_right.conf
+|       |   |       |       cradio_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---crbn
+|       |   |       |       crbn.conf
+|       |   |       |       crbn.keymap
+|       |   |       |       crbn.overlay
+|       |   |       |       crbn.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---eek
+|       |   |       |       eek.conf
+|       |   |       |       eek.keymap
+|       |   |       |       eek.overlay
+|       |   |       |       eek.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---elephant42
+|       |   |       |   |   elephant42.conf
+|       |   |       |   |   elephant42.dtsi
+|       |   |       |   |   elephant42.keymap
+|       |   |       |   |   elephant42.zmk.yml
+|       |   |       |   |   elephant42_left.overlay
+|       |   |       |   |   elephant42_right.overlay
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---ergodash
+|       |   |       |       ergodash.conf
+|       |   |       |       ergodash.dtsi
+|       |   |       |       ergodash.keymap
+|       |   |       |       ergodash.zmk.yml
+|       |   |       |       ergodash_left.overlay
+|       |   |       |       ergodash_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---eternal_keypad
+|       |   |       |   |   eternal_keypad.conf
+|       |   |       |   |   eternal_keypad.dtsi
+|       |   |       |   |   eternal_keypad.keymap
+|       |   |       |   |   eternal_keypad.overlay
+|       |   |       |   |   eternal_keypad.zmk.yml
+|       |   |       |   |   eternal_keypad_lefty.keymap
+|       |   |       |   |   eternal_keypad_lefty.overlay
+|       |   |       |   |   eternal_keypad_lefty.zmk.yml
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---fourier
+|       |   |       |       fourier.dtsi
+|       |   |       |       fourier.keymap
+|       |   |       |       fourier.zmk.yml
+|       |   |       |       fourier_left.overlay
+|       |   |       |       fourier_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---helix
+|       |   |       |   |   helix.conf
+|       |   |       |   |   helix.dtsi
+|       |   |       |   |   helix.keymap
+|       |   |       |   |   helix.zmk.yml
+|       |   |       |   |   helix_left.overlay
+|       |   |       |   |   helix_right.overlay
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---hummingbird
+|       |   |       |       hummingbird-layouts.dtsi
+|       |   |       |       hummingbird.conf
+|       |   |       |       hummingbird.keymap
+|       |   |       |       hummingbird.overlay
+|       |   |       |       hummingbird.zmk.yml
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---iris
+|       |   |       |       iris.conf
+|       |   |       |       iris.dtsi
+|       |   |       |       iris.keymap
+|       |   |       |       iris.zmk.yml
+|       |   |       |       iris_left.conf
+|       |   |       |       iris_left.overlay
+|       |   |       |       iris_right.conf
+|       |   |       |       iris_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---jian
+|       |   |       |       jian.conf
+|       |   |       |       jian.dtsi
+|       |   |       |       jian.keymap
+|       |   |       |       jian.zmk.yml
+|       |   |       |       jian_left.conf
+|       |   |       |       jian_left.overlay
+|       |   |       |       jian_right.conf
+|       |   |       |       jian_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---jiran
+|       |   |       |       jiran-layouts.dtsi
+|       |   |       |       jiran.conf
+|       |   |       |       jiran.dtsi
+|       |   |       |       jiran.keymap
+|       |   |       |       jiran.zmk.yml
+|       |   |       |       jiran_left.overlay
+|       |   |       |       jiran_right.overlay
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       
+|       |   |       +---jorne
+|       |   |       |   |   jorne-layouts.dtsi
+|       |   |       |   |   jorne.conf
+|       |   |       |   |   jorne.dtsi
+|       |   |       |   |   jorne.keymap
+|       |   |       |   |   jorne.zmk.yml
+|       |   |       |   |   jorne_left.conf
+|       |   |       |   |   jorne_left.overlay
+|       |   |       |   |   jorne_right.conf
+|       |   |       |   |   jorne_right.overlay
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---knob_goblin
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       knob_goblin.conf
+|       |   |       |       knob_goblin.keymap
+|       |   |       |       knob_goblin.overlay
+|       |   |       |       knob_goblin.zmk.yml
+|       |   |       |       
+|       |   |       +---kyria
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   kyria-layouts.dtsi
+|       |   |       |   |   kyria.conf
+|       |   |       |   |   kyria.dtsi
+|       |   |       |   |   kyria.keymap
+|       |   |       |   |   kyria.zmk.yml
+|       |   |       |   |   kyria_common.dtsi
+|       |   |       |   |   kyria_left.conf
+|       |   |       |   |   kyria_left.overlay
+|       |   |       |   |   kyria_rev2.conf
+|       |   |       |   |   kyria_rev2.dtsi
+|       |   |       |   |   kyria_rev2.keymap
+|       |   |       |   |   kyria_rev2.zmk.yml
+|       |   |       |   |   kyria_rev2_left.overlay
+|       |   |       |   |   kyria_rev2_right.overlay
+|       |   |       |   |   kyria_rev3.conf
+|       |   |       |   |   kyria_rev3.dtsi
+|       |   |       |   |   kyria_rev3.keymap
+|       |   |       |   |   kyria_rev3.zmk.yml
+|       |   |       |   |   kyria_rev3_left.overlay
+|       |   |       |   |   kyria_rev3_right.overlay
+|       |   |       |   |   kyria_right.conf
+|       |   |       |   |   kyria_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           nrfmicro_11.overlay
+|       |   |       |           nrfmicro_11_flipped.overlay
+|       |   |       |           nrfmicro_13.overlay
+|       |   |       |           
+|       |   |       +---leeloo
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   leeloo.conf
+|       |   |       |   |   leeloo.dtsi
+|       |   |       |   |   leeloo.keymap
+|       |   |       |   |   leeloo.zmk.yml
+|       |   |       |   |   leeloo_common.dtsi
+|       |   |       |   |   leeloo_left.overlay
+|       |   |       |   |   leeloo_rev2.conf
+|       |   |       |   |   leeloo_rev2.dtsi
+|       |   |       |   |   leeloo_rev2.keymap
+|       |   |       |   |   leeloo_rev2.zmk.yml
+|       |   |       |   |   leeloo_rev2_left.overlay
+|       |   |       |   |   leeloo_rev2_right.overlay
+|       |   |       |   |   leeloo_right.overlay
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---leeloo_micro
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   leeloo_micro.conf
+|       |   |       |   |   leeloo_micro.dtsi
+|       |   |       |   |   leeloo_micro.keymap
+|       |   |       |   |   leeloo_micro.zmk.yml
+|       |   |       |   |   leeloo_micro_left.overlay
+|       |   |       |   |   leeloo_micro_right.overlay
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---lily58
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   lily58.conf
+|       |   |       |   |   lily58.dtsi
+|       |   |       |   |   lily58.keymap
+|       |   |       |   |   lily58.zmk.yml
+|       |   |       |   |   lily58_left.conf
+|       |   |       |   |   lily58_left.overlay
+|       |   |       |   |   lily58_right.conf
+|       |   |       |   |   lily58_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---lotus58
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       lotus58-layouts.dtsi
+|       |   |       |       lotus58.conf
+|       |   |       |       lotus58.dtsi
+|       |   |       |       lotus58.keymap
+|       |   |       |       lotus58.zmk.yml
+|       |   |       |       lotus58_left.overlay
+|       |   |       |       lotus58_right.overlay
+|       |   |       |       
+|       |   |       +---m60
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       m60.conf
+|       |   |       |       m60.keymap
+|       |   |       |       m60.overlay
+|       |   |       |       m60.zmk.yml
+|       |   |       |       README.md
+|       |   |       |       
+|       |   |       +---microdox
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   microdox.conf
+|       |   |       |   |   microdox.dtsi
+|       |   |       |   |   microdox.keymap
+|       |   |       |   |   microdox.zmk.yml
+|       |   |       |   |   microdox_common.dtsi
+|       |   |       |   |   microdox_left.conf
+|       |   |       |   |   microdox_left.overlay
+|       |   |       |   |   microdox_right.conf
+|       |   |       |   |   microdox_right.overlay
+|       |   |       |   |   microdox_v2.conf
+|       |   |       |   |   microdox_v2.dtsi
+|       |   |       |   |   microdox_v2.zmk.yml
+|       |   |       |   |   microdox_v2_left.conf
+|       |   |       |   |   microdox_v2_left.overlay
+|       |   |       |   |   microdox_v2_right.conf
+|       |   |       |   |   microdox_v2_right.overlay
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---minivan_studio_tester
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       minivan_studio_tester.conf
+|       |   |       |       minivan_studio_tester.keymap
+|       |   |       |       minivan_studio_tester.overlay
+|       |   |       |       
+|       |   |       +---murphpad
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   murphpad-layout.dtsi
+|       |   |       |   |   murphpad.conf
+|       |   |       |   |   murphpad.keymap
+|       |   |       |   |   murphpad.overlay
+|       |   |       |   |   murphpad.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---naked60
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       naked60.conf
+|       |   |       |       naked60.keymap
+|       |   |       |       naked60.overlay
+|       |   |       |       naked60.zmk.yml
+|       |   |       |       
+|       |   |       +---nibble
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   nibble.conf
+|       |   |       |   |   nibble.keymap
+|       |   |       |   |   nibble.overlay
+|       |   |       |   |   nibble.zmk.yml
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.conf
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           proton_c.conf
+|       |   |       |           
+|       |   |       +---nice_view
+|       |   |       |   |   CMakeLists.txt
+|       |   |       |   |   custom_status_screen.c
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   nice_view.conf
+|       |   |       |   |   nice_view.overlay
+|       |   |       |   |   nice_view.zmk.yml
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---widgets
+|       |   |       |           art.c
+|       |   |       |           bolt.c
+|       |   |       |           peripheral_status.c
+|       |   |       |           peripheral_status.h
+|       |   |       |           status.c
+|       |   |       |           status.h
+|       |   |       |           util.c
+|       |   |       |           util.h
+|       |   |       |           
+|       |   |       +---nice_view_adapter
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   nice_view_adapter.conf
+|       |   |       |   |   nice_view_adapter.overlay
+|       |   |       |   |   nice_view_adapter.zmk.yml
+|       |   |       |   |   README.md
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           bluemicro840_v1.overlay
+|       |   |       |           mikoto.overlay
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           nrfmicro_11.overlay
+|       |   |       |           nrfmicro_11_flipped.overlay
+|       |   |       |           nrfmicro_13.overlay
+|       |   |       |           puchi_ble_v1.overlay
+|       |   |       |           
+|       |   |       +---osprette
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       osprette.conf
+|       |   |       |       osprette.keymap
+|       |   |       |       osprette.overlay
+|       |   |       |       osprette.zmk.yml
+|       |   |       |       
+|       |   |       +---pancake
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       pancake.conf
+|       |   |       |       pancake.keymap
+|       |   |       |       pancake.overlay
+|       |   |       |       pancake.zmk.yml
+|       |   |       |       
+|       |   |       +---posix_pro_micro
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       posix_pro_micro.overlay
+|       |   |       |       
+|       |   |       +---posix_seeed_xiao
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       posix_seeed_xiao.overlay
+|       |   |       |       
+|       |   |       +---qaz
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       qaz-layouts.dtsi
+|       |   |       |       qaz.conf
+|       |   |       |       qaz.keymap
+|       |   |       |       qaz.overlay
+|       |   |       |       qaz.zmk.yml
+|       |   |       |       
+|       |   |       +---quefrency
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       quefrency.conf
+|       |   |       |       quefrency.dtsi
+|       |   |       |       quefrency.keymap
+|       |   |       |       quefrency.zmk.yml
+|       |   |       |       quefrency_left.conf
+|       |   |       |       quefrency_left.overlay
+|       |   |       |       quefrency_right.conf
+|       |   |       |       quefrency_right.overlay
+|       |   |       |       
+|       |   |       +---redox
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   redox.conf
+|       |   |       |   |   redox.dtsi
+|       |   |       |   |   redox.keymap
+|       |   |       |   |   redox.zmk.yml
+|       |   |       |   |   redox_left.overlay
+|       |   |       |   |   redox_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---reviung34
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   README.md
+|       |   |       |   |   reviung34.conf
+|       |   |       |   |   reviung34.keymap
+|       |   |       |   |   reviung34.overlay
+|       |   |       |   |   reviung34.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---reviung41
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   reviung41.conf
+|       |   |       |   |   reviung41.keymap
+|       |   |       |   |   reviung41.overlay
+|       |   |       |   |   reviung41.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---reviung5
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   reviung5.conf
+|       |   |       |   |   reviung5.keymap
+|       |   |       |   |   reviung5.overlay
+|       |   |       |   |   reviung5.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---reviung53
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   reviung53.conf
+|       |   |       |   |   reviung53.keymap
+|       |   |       |   |   reviung53.overlay
+|       |   |       |   |   reviung53.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---romac
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       romac.conf
+|       |   |       |       romac.keymap
+|       |   |       |       romac.overlay
+|       |   |       |       romac.zmk.yml
+|       |   |       |       
+|       |   |       +---romac_plus
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   romac_plus.conf
+|       |   |       |   |   romac_plus.dtsi
+|       |   |       |   |   romac_plus.keymap
+|       |   |       |   |   romac_plus.overlay
+|       |   |       |   |   romac_plus.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---settings_reset
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       settings_reset.conf
+|       |   |       |       settings_reset.keymap
+|       |   |       |       settings_reset.overlay
+|       |   |       |       
+|       |   |       +---snap
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   snap.conf
+|       |   |       |   |   snap.dtsi
+|       |   |       |   |   snap.keymap
+|       |   |       |   |   snap.zmk.yml
+|       |   |       |   |   snap_left.overlay
+|       |   |       |   |   snap_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---sofle
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   sofle.conf
+|       |   |       |   |   sofle.dtsi
+|       |   |       |   |   sofle.keymap
+|       |   |       |   |   sofle.zmk.yml
+|       |   |       |   |   sofle_left.conf
+|       |   |       |   |   sofle_left.overlay
+|       |   |       |   |   sofle_right.conf
+|       |   |       |   |   sofle_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           nrfmicro_11.overlay
+|       |   |       |           nrfmicro_13.overlay
+|       |   |       |           
+|       |   |       +---splitkb_aurora_corne
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   splitkb_aurora_corne.conf
+|       |   |       |   |   splitkb_aurora_corne.dtsi
+|       |   |       |   |   splitkb_aurora_corne.keymap
+|       |   |       |   |   splitkb_aurora_corne.zmk.yml
+|       |   |       |   |   splitkb_aurora_corne_left.overlay
+|       |   |       |   |   splitkb_aurora_corne_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---splitkb_aurora_helix
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   splitkb_aurora_helix.conf
+|       |   |       |   |   splitkb_aurora_helix.dtsi
+|       |   |       |   |   splitkb_aurora_helix.keymap
+|       |   |       |   |   splitkb_aurora_helix.zmk.yml
+|       |   |       |   |   splitkb_aurora_helix_left.overlay
+|       |   |       |   |   splitkb_aurora_helix_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---splitkb_aurora_lily58
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   splitkb_aurora_lily58.conf
+|       |   |       |   |   splitkb_aurora_lily58.dtsi
+|       |   |       |   |   splitkb_aurora_lily58.keymap
+|       |   |       |   |   splitkb_aurora_lily58.zmk.yml
+|       |   |       |   |   splitkb_aurora_lily58_left.overlay
+|       |   |       |   |   splitkb_aurora_lily58_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---splitkb_aurora_sofle
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   splitkb_aurora_sofle.conf
+|       |   |       |   |   splitkb_aurora_sofle.dtsi
+|       |   |       |   |   splitkb_aurora_sofle.keymap
+|       |   |       |   |   splitkb_aurora_sofle.zmk.yml
+|       |   |       |   |   splitkb_aurora_sofle_left.overlay
+|       |   |       |   |   splitkb_aurora_sofle_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---splitkb_aurora_sweep
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   splitkb_aurora_sweep.conf
+|       |   |       |   |   splitkb_aurora_sweep.dtsi
+|       |   |       |   |   splitkb_aurora_sweep.keymap
+|       |   |       |   |   splitkb_aurora_sweep.zmk.yml
+|       |   |       |   |   splitkb_aurora_sweep_left.overlay
+|       |   |       |   |   splitkb_aurora_sweep_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---splitreus62
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       splitreus62.conf
+|       |   |       |       splitreus62.dtsi
+|       |   |       |       splitreus62.keymap
+|       |   |       |       splitreus62.zmk.yml
+|       |   |       |       splitreus62_left.conf
+|       |   |       |       splitreus62_left.overlay
+|       |   |       |       splitreus62_right.conf
+|       |   |       |       splitreus62_right.overlay
+|       |   |       |       
+|       |   |       +---tester_pro_micro
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       tester_pro_micro-layouts.dtsi
+|       |   |       |       tester_pro_micro.keymap
+|       |   |       |       tester_pro_micro.overlay
+|       |   |       |       tester_pro_micro.zmk.yml
+|       |   |       |       
+|       |   |       +---tester_xiao
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       tester_xiao-layouts.dtsi
+|       |   |       |       tester_xiao.keymap
+|       |   |       |       tester_xiao.overlay
+|       |   |       |       tester_xiao.zmk.yml
+|       |   |       |       
+|       |   |       +---tg4x
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   README.md
+|       |   |       |   |   tg4x.conf
+|       |   |       |   |   tg4x.keymap
+|       |   |       |   |   tg4x.overlay
+|       |   |       |   |   tg4x.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.conf
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---tidbit
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   README.md
+|       |   |       |   |   tidbit.conf
+|       |   |       |   |   tidbit.keymap
+|       |   |       |   |   tidbit.overlay
+|       |   |       |   |   tidbit.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           
+|       |   |       +---two_percent_milk
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   two_percent_milk.conf
+|       |   |       |   |   two_percent_milk.keymap
+|       |   |       |   |   two_percent_milk.overlay
+|       |   |       |   |   two_percent_milk.zmk.yml
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nice_nano.overlay
+|       |   |       |           nice_nano_v2.overlay
+|       |   |       |           nrfmicro_11.overlay
+|       |   |       |           nrfmicro_11_flipped.overlay
+|       |   |       |           nrfmicro_13.overlay
+|       |   |       |           
+|       |   |       +---waterfowl
+|       |   |       |       Kconfig.defconfig
+|       |   |       |       Kconfig.shield
+|       |   |       |       waterfowl.conf
+|       |   |       |       waterfowl.dtsi
+|       |   |       |       waterfowl.keymap
+|       |   |       |       waterfowl.zmk.yml
+|       |   |       |       waterfowl_left.conf
+|       |   |       |       waterfowl_left.overlay
+|       |   |       |       waterfowl_right.conf
+|       |   |       |       waterfowl_right.overlay
+|       |   |       |       
+|       |   |       +---zmk_uno
+|       |   |       |   |   Kconfig.defconfig
+|       |   |       |   |   Kconfig.shield
+|       |   |       |   |   zmk_uno-layouts.dtsi
+|       |   |       |   |   zmk_uno.conf
+|       |   |       |   |   zmk_uno.dtsi
+|       |   |       |   |   zmk_uno.keymap
+|       |   |       |   |   zmk_uno.overlay
+|       |   |       |   |   zmk_uno.zmk.yml
+|       |   |       |   |   zmk_uno_split-layouts.dtsi
+|       |   |       |   |   zmk_uno_split.dtsi
+|       |   |       |   |   zmk_uno_split.keymap
+|       |   |       |   |   zmk_uno_split_left.conf
+|       |   |       |   |   zmk_uno_split_left.overlay
+|       |   |       |   |   zmk_uno_split_right.conf
+|       |   |       |   |   zmk_uno_split_right.overlay
+|       |   |       |   |   
+|       |   |       |   \---boards
+|       |   |       |           nrf52840dk_nrf52840.overlay
+|       |   |       |           
+|       |   |       \---zodiark
+|       |   |               Kconfig.defconfig
+|       |   |               Kconfig.shield
+|       |   |               zodiark.conf
+|       |   |               zodiark.dtsi
+|       |   |               zodiark.keymap
+|       |   |               zodiark.zmk.yml
+|       |   |               zodiark_left.overlay
+|       |   |               zodiark_right.overlay
+|       |   |               
+|       |   +---dts
+|       |   |   |   behaviors.dtsi
+|       |   |   |   physical_layouts.dtsi
+|       |   |   |   
+|       |   |   +---behaviors
+|       |   |   |       backlight.dtsi
+|       |   |   |       bluetooth.dtsi
+|       |   |   |       caps_word.dtsi
+|       |   |   |       ext_power.dtsi
+|       |   |   |       gresc.dtsi
+|       |   |   |       key_press.dtsi
+|       |   |   |       key_repeat.dtsi
+|       |   |   |       key_toggle.dtsi
+|       |   |   |       layer_tap.dtsi
+|       |   |   |       macros.dtsi
+|       |   |   |       mod_tap.dtsi
+|       |   |   |       momentary_layer.dtsi
+|       |   |   |       mouse_keys.dtsi
+|       |   |   |       mouse_key_press.dtsi
+|       |   |   |       mouse_move.dtsi
+|       |   |   |       mouse_scroll.dtsi
+|       |   |   |       none.dtsi
+|       |   |   |       outputs.dtsi
+|       |   |   |       reset.dtsi
+|       |   |   |       rgb_underglow.dtsi
+|       |   |   |       sensor_rotate_key_press.dtsi
+|       |   |   |       soft_off.dtsi
+|       |   |   |       sticky_key.dtsi
+|       |   |   |       studio_unlock.dtsi
+|       |   |   |       toggle_layer.dtsi
+|       |   |   |       to_layer.dtsi
+|       |   |   |       transparent.dtsi
+|       |   |   |       
+|       |   |   +---bindings
+|       |   |   |   |   vendor-prefixes.txt
+|       |   |   |   |   zmk,combos.yaml
+|       |   |   |   |   zmk,conditional-layers.yaml
+|       |   |   |   |   zmk,ext-power-generic.yaml
+|       |   |   |   |   zmk,gpio-key-wakeup-trigger.yaml
+|       |   |   |   |   zmk,input-listener.yaml
+|       |   |   |   |   zmk,input-split.yaml
+|       |   |   |   |   zmk,key-physical-attrs.yaml
+|       |   |   |   |   zmk,keymap-sensors.yaml
+|       |   |   |   |   zmk,keymap.yaml
+|       |   |   |   |   zmk,kscan-composite.yaml
+|       |   |   |   |   zmk,kscan-mock.yaml
+|       |   |   |   |   zmk,matrix-transform.yaml
+|       |   |   |   |   zmk,physical-layout-position-map.yaml
+|       |   |   |   |   zmk,physical-layout.yaml
+|       |   |   |   |   zmk,soft-off-wakeup-sources.yaml
+|       |   |   |   |   zmk,wired-split.yaml
+|       |   |   |   |   
+|       |   |   |   +---behaviors
+|       |   |   |   |       behavior-metadata.yaml
+|       |   |   |   |       macro_base.yaml
+|       |   |   |   |       one_param.yaml
+|       |   |   |   |       two_param.yaml
+|       |   |   |   |       zero_param.yaml
+|       |   |   |   |       zmk,behavior-backlight.yaml
+|       |   |   |   |       zmk,behavior-bluetooth.yaml
+|       |   |   |   |       zmk,behavior-caps-word.yaml
+|       |   |   |   |       zmk,behavior-ext-power.yaml
+|       |   |   |   |       zmk,behavior-hold-tap.yaml
+|       |   |   |   |       zmk,behavior-input-two-axis.yaml
+|       |   |   |   |       zmk,behavior-key-press.yaml
+|       |   |   |   |       zmk,behavior-key-repeat.yaml
+|       |   |   |   |       zmk,behavior-key-toggle.yaml
+|       |   |   |   |       zmk,behavior-macro-one-param.yaml
+|       |   |   |   |       zmk,behavior-macro-two-param.yaml
+|       |   |   |   |       zmk,behavior-macro.yaml
+|       |   |   |   |       zmk,behavior-mod-morph.yaml
+|       |   |   |   |       zmk,behavior-momentary-layer.yaml
+|       |   |   |   |       zmk,behavior-mouse-key-press.yaml
+|       |   |   |   |       zmk,behavior-none.yaml
+|       |   |   |   |       zmk,behavior-outputs.yaml
+|       |   |   |   |       zmk,behavior-reset.yaml
+|       |   |   |   |       zmk,behavior-rgb-underglow.yaml
+|       |   |   |   |       zmk,behavior-sensor-rotate-var.yaml
+|       |   |   |   |       zmk,behavior-sensor-rotate.yaml
+|       |   |   |   |       zmk,behavior-soft-off.yaml
+|       |   |   |   |       zmk,behavior-sticky-key.yaml
+|       |   |   |   |       zmk,behavior-studio-unlock.yaml
+|       |   |   |   |       zmk,behavior-tap-dance.yaml
+|       |   |   |   |       zmk,behavior-to-layer.yaml
+|       |   |   |   |       zmk,behavior-toggle-layer.yaml
+|       |   |   |   |       zmk,behavior-transparent.yaml
+|       |   |   |   |       
+|       |   |   |   +---gpio
+|       |   |   |   |       moergo,glove80-ext.yaml
+|       |   |   |   |       
+|       |   |   |   +---input_processors
+|       |   |   |   |       ip_common.yaml
+|       |   |   |   |       ip_one_param.yaml
+|       |   |   |   |       ip_two_param.yaml
+|       |   |   |   |       ip_zero_param.yaml
+|       |   |   |   |       zmk,input-processor-behaviors.yaml
+|       |   |   |   |       zmk,input-processor-code-mapper.yaml
+|       |   |   |   |       zmk,input-processor-scaler.yaml
+|       |   |   |   |       zmk,input-processor-temp-layer.yaml
+|       |   |   |   |       zmk,input-processor-transform.yaml
+|       |   |   |   |       
+|       |   |   |   +---kscan
+|       |   |   |   |       zmk,kscan-sideband-behaviors.yaml
+|       |   |   |   |       
+|       |   |   |   \---macros
+|       |   |   |           zmk,macro-control-mode-press.yaml
+|       |   |   |           zmk,macro-control-mode-release.yaml
+|       |   |   |           zmk,macro-control-mode-tap.yaml
+|       |   |   |           zmk,macro-control-tap-time.yaml
+|       |   |   |           zmk,macro-control-wait-time.yaml
+|       |   |   |           zmk,macro-param-1to1.yaml
+|       |   |   |           zmk,macro-param-1to2.yaml
+|       |   |   |           zmk,macro-param-2to1.yaml
+|       |   |   |           zmk,macro-param-2to2.yaml
+|       |   |   |           zmk,macro-pause-for-release.yaml
+|       |   |   |           
+|       |   |   +---common
+|       |   |   |       arduino_uno_pro_micro_map.dtsi
+|       |   |   |       
+|       |   |   +---input
+|       |   |   |   |   processors.dtsi
+|       |   |   |   |   
+|       |   |   |   \---processors
+|       |   |   |           behaviors.dtsi
+|       |   |   |           code_mapper.dtsi
+|       |   |   |           scaler.dtsi
+|       |   |   |           temp_layer.dtsi
+|       |   |   |           transform.dtsi
+|       |   |   |           
+|       |   |   \---layouts
+|       |   |       +---common
+|       |   |       |   +---60percent
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       ansi.dtsi
+|       |   |       |   |       hhkb.dtsi
+|       |   |       |   |       iso.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---65percent
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       ansi.dtsi
+|       |   |       |   |       hhkb.dtsi
+|       |   |       |   |       iso.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---75percent
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       ansi.dtsi
+|       |   |       |   |       iso.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---numpad
+|       |   |       |   |       17_key.dtsi
+|       |   |       |   |       18_key.dtsi
+|       |   |       |   |       18_key_00.dtsi
+|       |   |       |   |       19_key_00.dtsi
+|       |   |       |   |       20_key.dtsi
+|       |   |       |   |       21_key.dtsi
+|       |   |       |   |       22_key.dtsi
+|       |   |       |   |       22_key_00.dtsi
+|       |   |       |   |       23_key_00.dtsi
+|       |   |       |   |       24_key.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---ortho_4x10
+|       |   |       |   |       1x2u.dtsi
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---ortho_4x12
+|       |   |       |   |       1x2u.dtsi
+|       |   |       |   |       2x2u.dtsi
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   +---ortho_5x12
+|       |   |       |   |       1x2u.dtsi
+|       |   |       |   |       2x2u.dtsi
+|       |   |       |   |       all1u.dtsi
+|       |   |       |   |       position_map.dtsi
+|       |   |       |   |       
+|       |   |       |   \---tkl
+|       |   |       |           ansi.dtsi
+|       |   |       |           position_map.dtsi
+|       |   |       |           
+|       |   |       +---cuddlykeyboards
+|       |   |       |       ferris.dtsi
+|       |   |       |       
+|       |   |       +---foostan
+|       |   |       |   \---corne
+|       |   |       |           5column.dtsi
+|       |   |       |           6column.dtsi
+|       |   |       |           position_map.dtsi
+|       |   |       |           
+|       |   |       +---gtips
+|       |   |       |       reviung41.dtsi
+|       |   |       |       
+|       |   |       +---josefadamcik
+|       |   |       |       sofle.dtsi
+|       |   |       |       
+|       |   |       +---kata0510
+|       |   |       |       lily58.dtsi
+|       |   |       |       
+|       |   |       \---kgoh
+|       |   |           \---jian
+|       |   |                   5column.dtsi
+|       |   |                   6column.dtsi
+|       |   |                   full.dtsi
+|       |   |                   position_map.dtsi
+|       |   |                   
+|       |   +---include
+|       |   |   +---drivers
+|       |   |   |       behavior.h
+|       |   |   |       ext_power.h
+|       |   |   |       input_processor.h
+|       |   |   |       
+|       |   |   +---dt-bindings
+|       |   |   |   |   input.h
+|       |   |   |   |   
+|       |   |   |   \---zmk
+|       |   |   |           backlight.h
+|       |   |   |           behaviors.h
+|       |   |   |           bt.h
+|       |   |   |           ext_power.h
+|       |   |   |           hid_usage.h
+|       |   |   |           hid_usage_pages.h
+|       |   |   |           input_transform.h
+|       |   |   |           keys.h
+|       |   |   |           matrix-transform.h
+|       |   |   |           matrix_transform.h
+|       |   |   |           modifiers.h
+|       |   |   |           mouse.h
+|       |   |   |           outputs.h
+|       |   |   |           pointing.h
+|       |   |   |           reset.h
+|       |   |   |           rgb.h
+|       |   |   |           
+|       |   |   +---linker
+|       |   |   |       zmk-behavior-local-id-map.ld
+|       |   |   |       zmk-behaviors.ld
+|       |   |   |       zmk-events.ld
+|       |   |   |       zmk-rpc-event-mappers.ld
+|       |   |   |       zmk-rpc-subsystem-handlers.ld
+|       |   |   |       zmk-rpc-subsystem-settings-reset.ld
+|       |   |   |       zmk-rpc-subsystems.ld
+|       |   |   |       zmk-rpc-transport.ld
+|       |   |   |       zmk-split-transport-central.ld
+|       |   |   |       zmk-split-transport-peripheral.ld
+|       |   |   |       
+|       |   |   \---zmk
+|       |   |       |   activity.h
+|       |   |       |   backlight.h
+|       |   |       |   battery.h
+|       |   |       |   behavior.h
+|       |   |       |   behavior_queue.h
+|       |   |       |   ble.h
+|       |   |       |   combos.h
+|       |   |       |   display.h
+|       |   |       |   endpoints.h
+|       |   |       |   endpoints_types.h
+|       |   |       |   event_manager.h
+|       |   |       |   hid.h
+|       |   |       |   hid_indicators.h
+|       |   |       |   hid_indicators_types.h
+|       |   |       |   hog.h
+|       |   |       |   input.h
+|       |   |       |   input_listeners.h
+|       |   |       |   keymap.h
+|       |   |       |   keys.h
+|       |   |       |   matrix.h
+|       |   |       |   matrix_transform.h
+|       |   |       |   physical_layouts.h
+|       |   |       |   pm.h
+|       |   |       |   pointing.h
+|       |   |       |   rgb_underglow.h
+|       |   |       |   sensors.h
+|       |   |       |   settings.h
+|       |   |       |   stdlib.h
+|       |   |       |   usb.h
+|       |   |       |   usb_hid.h
+|       |   |       |   virtual_key_position.h
+|       |   |       |   workqueue.h
+|       |   |       |   wpm.h
+|       |   |       |   
+|       |   |       +---ble
+|       |   |       |       profile.h
+|       |   |       |       
+|       |   |       +---display
+|       |   |       |   |   status_screen.h
+|       |   |       |   |   
+|       |   |       |   \---widgets
+|       |   |       |           battery_status.h
+|       |   |       |           layer_status.h
+|       |   |       |           output_status.h
+|       |   |       |           peripheral_status.h
+|       |   |       |           wpm_status.h
+|       |   |       |           
+|       |   |       +---events
+|       |   |       |       activity_state_changed.h
+|       |   |       |       battery_state_changed.h
+|       |   |       |       ble_active_profile_changed.h
+|       |   |       |       endpoint_changed.h
+|       |   |       |       hid_indicators_changed.h
+|       |   |       |       keycode_state_changed.h
+|       |   |       |       layer_state_changed.h
+|       |   |       |       modifiers_state_changed.h
+|       |   |       |       mouse_button_state_changed.h
+|       |   |       |       position_state_changed.h
+|       |   |       |       sensor_event.h
+|       |   |       |       split_peripheral_status_changed.h
+|       |   |       |       usb_conn_state_changed.h
+|       |   |       |       wpm_state_changed.h
+|       |   |       |       
+|       |   |       +---pointing
+|       |   |       |       input_split.h
+|       |   |       |       resolution_multipliers.h
+|       |   |       |       
+|       |   |       +---split
+|       |   |       |   |   central.h
+|       |   |       |   |   peripheral.h
+|       |   |       |   |   
+|       |   |       |   +---bluetooth
+|       |   |       |   |       peripheral.h
+|       |   |       |   |       service.h
+|       |   |       |   |       uuid.h
+|       |   |       |   |       
+|       |   |       |   \---transport
+|       |   |       |           central.h
+|       |   |       |           peripheral.h
+|       |   |       |           types.h
+|       |   |       |           
+|       |   |       \---studio
+|       |   |               core.h
+|       |   |               rpc.h
+|       |   |               
+|       |   +---keymap-module
+|       |   |   +---modules
+|       |   |   |       modules.cmake
+|       |   |   |       
+|       |   |   \---zephyr
+|       |   |           module.yml
+|       |   |           
+|       |   +---module
+|       |   |   |   CMakeLists.txt
+|       |   |   |   Kconfig
+|       |   |   |   
+|       |   |   +---drivers
+|       |   |   |   |   CMakeLists.txt
+|       |   |   |   |   Kconfig
+|       |   |   |   |   
+|       |   |   |   +---display
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       il0323.c
+|       |   |   |   |       il0323_regs.h
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.il0323
+|       |   |   |   |       
+|       |   |   |   +---gpio
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       gpio_595.c
+|       |   |   |   |       gpio_max7318.c
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.595
+|       |   |   |   |       Kconfig.max7318
+|       |   |   |   |       
+|       |   |   |   +---input
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       input_mock.c
+|       |   |   |   |       Kconfig
+|       |   |   |   |       
+|       |   |   |   +---kscan
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig
+|       |   |   |   |       kscan_composite.c
+|       |   |   |   |       kscan_gpio.c
+|       |   |   |   |       kscan_gpio.h
+|       |   |   |   |       kscan_gpio_charlieplex.c
+|       |   |   |   |       kscan_gpio_demux.c
+|       |   |   |   |       kscan_gpio_direct.c
+|       |   |   |   |       kscan_gpio_matrix.c
+|       |   |   |   |       kscan_mock.c
+|       |   |   |   |       
+|       |   |   |   \---sensor
+|       |   |   |       |   CMakeLists.txt
+|       |   |   |       |   Kconfig
+|       |   |   |       |   
+|       |   |   |       +---battery
+|       |   |   |       |       battery_common.c
+|       |   |   |       |       battery_common.h
+|       |   |   |       |       battery_nrf_vddh.c
+|       |   |   |       |       battery_voltage_divider.c
+|       |   |   |       |       CMakeLists.txt
+|       |   |   |       |       Kconfig
+|       |   |   |       |       
+|       |   |   |       +---ec11
+|       |   |   |       |       CMakeLists.txt
+|       |   |   |       |       ec11.c
+|       |   |   |       |       ec11.h
+|       |   |   |       |       ec11_trigger.c
+|       |   |   |       |       Kconfig
+|       |   |   |       |       
+|       |   |   |       +---encoder_mock
+|       |   |   |       |       CMakeLists.txt
+|       |   |   |       |       encoder_mock.c
+|       |   |   |       |       Kconfig
+|       |   |   |       |       
+|       |   |   |       \---max17048
+|       |   |   |               CMakeLists.txt
+|       |   |   |               Kconfig
+|       |   |   |               max17048.c
+|       |   |   |               max17048.h
+|       |   |   |               
+|       |   |   +---dts
+|       |   |   |   \---bindings
+|       |   |   |       +---display
+|       |   |   |       |       gooddisplay,il0323.yaml
+|       |   |   |       |       
+|       |   |   |       +---gpio
+|       |   |   |       |       maxim,max7318.yaml
+|       |   |   |       |       zmk,gpio-595.yaml
+|       |   |   |       |       
+|       |   |   |       +---input
+|       |   |   |       |       zmk,input-mock.yaml
+|       |   |   |       |       
+|       |   |   |       +---kscan
+|       |   |   |       |       zmk,kscan-gpio-charlieplex.yaml
+|       |   |   |       |       zmk,kscan-gpio-demux.yaml
+|       |   |   |       |       zmk,kscan-gpio-direct.yaml
+|       |   |   |       |       zmk,kscan-gpio-matrix.yaml
+|       |   |   |       |       
+|       |   |   |       \---sensor
+|       |   |   |               alps,ec11.yaml
+|       |   |   |               zmk,battery-nrf-vddh.yaml
+|       |   |   |               zmk,battery-voltage-divider.yaml
+|       |   |   |               zmk,maxim-max17048.yml
+|       |   |   |               zmk,sensor-encoder-mock.yaml
+|       |   |   |               
+|       |   |   +---include
+|       |   |   |   +---dt-bindings
+|       |   |   |   |   \---zmk
+|       |   |   |   |           kscan_mock.h
+|       |   |   |   |           
+|       |   |   |   \---zmk
+|       |   |   |           debounce.h
+|       |   |   |           
+|       |   |   +---lib
+|       |   |   |   |   CMakeLists.txt
+|       |   |   |   |   Kconfig
+|       |   |   |   |   
+|       |   |   |   \---zmk_debounce
+|       |   |   |           CMakeLists.txt
+|       |   |   |           debounce.c
+|       |   |   |           Kconfig
+|       |   |   |           
+|       |   |   \---zephyr
+|       |   |           module.yml
+|       |   |           
+|       |   +---scripts
+|       |   |   |   requirements.txt
+|       |   |   |   west-commands.yml
+|       |   |   |   
+|       |   |   \---west_commands
+|       |   |           metadata.py
+|       |   |           test.py
+|       |   |           
+|       |   +---snippets
+|       |   |   +---nrf52833-nosd
+|       |   |   |       nrf52833-nosd.overlay
+|       |   |   |       snippet.yml
+|       |   |   |       
+|       |   |   +---nrf52840-nosd
+|       |   |   |       nrf52840-nosd.overlay
+|       |   |   |       snippet.yml
+|       |   |   |       
+|       |   |   +---studio-rpc-usb-uart
+|       |   |   |       snippet.yml
+|       |   |   |       studio-rpc-usb-uart.conf
+|       |   |   |       studio-rpc-usb-uart.overlay
+|       |   |   |       
+|       |   |   \---zmk-usb-logging
+|       |   |           snippet.yml
+|       |   |           zmk-usb-logging.conf
+|       |   |           zmk-usb-logging.overlay
+|       |   |           
+|       |   +---src
+|       |   |   |   activity.c
+|       |   |   |   backlight.c
+|       |   |   |   battery.c
+|       |   |   |   behavior.c
+|       |   |   |   behavior_queue.c
+|       |   |   |   ble.c
+|       |   |   |   combo.c
+|       |   |   |   conditional_layer.c
+|       |   |   |   endpoints.c
+|       |   |   |   event_manager.c
+|       |   |   |   ext_power_generic.c
+|       |   |   |   gpio_key_wakeup_trigger.c
+|       |   |   |   hid.c
+|       |   |   |   hid_indicators.c
+|       |   |   |   hid_listener.c
+|       |   |   |   hog.c
+|       |   |   |   keymap.c
+|       |   |   |   kscan_sideband_behaviors.c
+|       |   |   |   main.c
+|       |   |   |   matrix_transform.c
+|       |   |   |   physical_layouts.c
+|       |   |   |   pm.c
+|       |   |   |   rgb_underglow.c
+|       |   |   |   sensors.c
+|       |   |   |   stdlib.c
+|       |   |   |   usb.c
+|       |   |   |   usb_hid.c
+|       |   |   |   workqueue.c
+|       |   |   |   wpm.c
+|       |   |   |   
+|       |   |   +---behaviors
+|       |   |   |       behavior_backlight.c
+|       |   |   |       behavior_bt.c
+|       |   |   |       behavior_caps_word.c
+|       |   |   |       behavior_ext_power.c
+|       |   |   |       behavior_hold_tap.c
+|       |   |   |       behavior_input_two_axis.c
+|       |   |   |       behavior_key_press.c
+|       |   |   |       behavior_key_repeat.c
+|       |   |   |       behavior_key_toggle.c
+|       |   |   |       behavior_macro.c
+|       |   |   |       behavior_mod_morph.c
+|       |   |   |       behavior_momentary_layer.c
+|       |   |   |       behavior_mouse_key_press.c
+|       |   |   |       behavior_none.c
+|       |   |   |       behavior_outputs.c
+|       |   |   |       behavior_reset.c
+|       |   |   |       behavior_rgb_underglow.c
+|       |   |   |       behavior_sensor_rotate.c
+|       |   |   |       behavior_sensor_rotate_common.c
+|       |   |   |       behavior_sensor_rotate_common.h
+|       |   |   |       behavior_sensor_rotate_var.c
+|       |   |   |       behavior_soft_off.c
+|       |   |   |       behavior_sticky_key.c
+|       |   |   |       behavior_studio_unlock.c
+|       |   |   |       behavior_tap_dance.c
+|       |   |   |       behavior_toggle_layer.c
+|       |   |   |       behavior_to_layer.c
+|       |   |   |       behavior_transparent.c
+|       |   |   |       
+|       |   |   +---display
+|       |   |   |   |   CMakeLists.txt
+|       |   |   |   |   Kconfig
+|       |   |   |   |   main.c
+|       |   |   |   |   status_screen.c
+|       |   |   |   |   theme.c
+|       |   |   |   |   theme.h
+|       |   |   |   |   
+|       |   |   |   \---widgets
+|       |   |   |           battery_status.c
+|       |   |   |           CMakeLists.txt
+|       |   |   |           Kconfig
+|       |   |   |           layer_status.c
+|       |   |   |           output_status.c
+|       |   |   |           peripheral_status.c
+|       |   |   |           wpm_status.c
+|       |   |   |           
+|       |   |   +---events
+|       |   |   |       activity_state_changed.c
+|       |   |   |       battery_state_changed.c
+|       |   |   |       ble_active_profile_changed.c
+|       |   |   |       endpoint_changed.c
+|       |   |   |       hid_indicators_changed.c
+|       |   |   |       keycode_state_changed.c
+|       |   |   |       layer_state_changed.c
+|       |   |   |       modifiers_state_changed.c
+|       |   |   |       mouse_button_state_changed.c
+|       |   |   |       position_state_changed.c
+|       |   |   |       sensor_event.c
+|       |   |   |       split_peripheral_status_changed.c
+|       |   |   |       usb_conn_state_changed.c
+|       |   |   |       wpm_state_changed.c
+|       |   |   |       
+|       |   |   +---pointing
+|       |   |   |       CMakeLists.txt
+|       |   |   |       input_listener.c
+|       |   |   |       input_processor_behaviors.c
+|       |   |   |       input_processor_code_mapper.c
+|       |   |   |       input_processor_scaler.c
+|       |   |   |       input_processor_temp_layer.c
+|       |   |   |       input_processor_transform.c
+|       |   |   |       input_split.c
+|       |   |   |       Kconfig
+|       |   |   |       resolution_multipliers.c
+|       |   |   |       
+|       |   |   +---settings
+|       |   |   |       CMakeLists.txt
+|       |   |   |       reset_settings_fcb.c
+|       |   |   |       reset_settings_file.c
+|       |   |   |       reset_settings_none.c
+|       |   |   |       reset_settings_nvs.c
+|       |   |   |       reset_settings_on_start.c
+|       |   |   |       
+|       |   |   +---split
+|       |   |   |   |   central.c
+|       |   |   |   |   CMakeLists.txt
+|       |   |   |   |   Kconfig
+|       |   |   |   |   Kconfig.defaults
+|       |   |   |   |   peripheral.c
+|       |   |   |   |   
+|       |   |   |   +---bluetooth
+|       |   |   |   |       central.c
+|       |   |   |   |       central_bas_proxy.c
+|       |   |   |   |       CMakeLists.txt
+|       |   |   |   |       Kconfig
+|       |   |   |   |       Kconfig.defaults
+|       |   |   |   |       peripheral.c
+|       |   |   |   |       peripheral.h
+|       |   |   |   |       service.c
+|       |   |   |   |       service.h
+|       |   |   |   |       
+|       |   |   |   \---wired
+|       |   |   |           central.c
+|       |   |   |           CMakeLists.txt
+|       |   |   |           Kconfig
+|       |   |   |           Kconfig.defaults
+|       |   |   |           peripheral.c
+|       |   |   |           wired.c
+|       |   |   |           wired.h
+|       |   |   |           
+|       |   |   \---studio
+|       |   |           behavior_subsystem.c
+|       |   |           CMakeLists.txt
+|       |   |           core.c
+|       |   |           core_subsystem.c
+|       |   |           gatt_rpc_transport.c
+|       |   |           Kconfig
+|       |   |           keymap_subsystem.c
+|       |   |           msg_framing.c
+|       |   |           msg_framing.h
+|       |   |           rpc.c
+|       |   |           uart_rpc_transport.c
+|       |   |           uuid.h
+|       |   |           
+|       |   \---tests
+|       |       +---backlight
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---basic
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---config-brt
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---config-on
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---config-step
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---cycle
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---low-brightness
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.conf
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---ble
+|       |       |   +---central
+|       |       |   |   |   CMakeLists.txt
+|       |       |   |   |   prj.conf
+|       |       |   |   |   
+|       |       |   |   \---src
+|       |       |   |           main.c
+|       |       |   |           
+|       |       |   +---profiles
+|       |       |   |   +---bond-clear-then-bond-second-client
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   +---bond-to-cleared-profile
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   +---connnect-and-output-to-selection
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   +---dont-bond-to-taken-profile
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   +---first-and-second-profile-paired-then-send-data
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   +---overwrite-enabled-reconnect-without-bond-then-output-to-selection
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.conf
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   \---reconnect-then-output-to-selection
+|       |       |   |           events.patterns
+|       |       |   |           nrf52_bsim.keymap
+|       |       |   |           siblings.txt
+|       |       |   |           snapshot.log
+|       |       |   |           
+|       |       |   +---security
+|       |       |   |   +---read-hid-after-connect-with-auto-sec
+|       |       |   |   |       events.patterns
+|       |       |   |   |       nrf52_bsim.conf
+|       |       |   |   |       nrf52_bsim.keymap
+|       |       |   |   |       siblings.txt
+|       |       |   |   |       snapshot.log
+|       |       |   |   |       
+|       |       |   |   \---read-hid-after-connect-without-auto-sec
+|       |       |   |           events.patterns
+|       |       |   |           nrf52_bsim.conf
+|       |       |   |           nrf52_bsim.keymap
+|       |       |   |           siblings.txt
+|       |       |   |           snapshot.log
+|       |       |   |           
+|       |       |   \---split
+|       |       |       +---basic
+|       |       |       |       events.patterns
+|       |       |       |       nrf52_bsim.conf
+|       |       |       |       nrf52_bsim.keymap
+|       |       |       |       peripheral.overlay
+|       |       |       |       siblings.txt
+|       |       |       |       snapshot.log
+|       |       |       |       
+|       |       |       +---multiple-peripherals
+|       |       |       |       events.patterns
+|       |       |       |       nrf52_bsim.conf
+|       |       |       |       nrf52_bsim.keymap
+|       |       |       |       peripheral1.overlay
+|       |       |       |       peripheral2.overlay
+|       |       |       |       siblings.txt
+|       |       |       |       snapshot.log
+|       |       |       |       
+|       |       |       +---peripheral-encoder
+|       |       |       |       events.patterns
+|       |       |       |       nrf52_bsim.conf
+|       |       |       |       nrf52_bsim.keymap
+|       |       |       |       peripheral.overlay
+|       |       |       |       shared.dtsi
+|       |       |       |       siblings.txt
+|       |       |       |       snapshot.log
+|       |       |       |       
+|       |       |       +---peripheral-input
+|       |       |       |       events.patterns
+|       |       |       |       nrf52_bsim.conf
+|       |       |       |       nrf52_bsim.keymap
+|       |       |       |       peripheral.overlay
+|       |       |       |       shared.dtsi
+|       |       |       |       siblings.txt
+|       |       |       |       snapshot.log
+|       |       |       |       
+|       |       |       +---run-peripheral-behavior
+|       |       |       |       events.patterns
+|       |       |       |       nrf52_bsim.conf
+|       |       |       |       nrf52_bsim.keymap
+|       |       |       |       peripheral.overlay
+|       |       |       |       siblings.txt
+|       |       |       |       snapshot.log
+|       |       |       |       
+|       |       |       \---set-hid-indicators
+|       |       |               events.patterns
+|       |       |               nrf52_bsim.conf
+|       |       |               nrf52_bsim.keymap
+|       |       |               peripheral.overlay
+|       |       |               siblings.txt
+|       |       |               snapshot.log
+|       |       |               
+|       |       +---caps-word
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---continue-with-modifiers
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---continue-with-non-alpha-continue-list-item
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---continue-with-non-modified-numeric-usage-id
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---deactivate-by-non-alpha-non-continuation
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---deactivate-by-second-press
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix.keymap
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---combo
+|       |       |   +---combos-and-holdtaps-0
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---combos-and-holdtaps-1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---combos-and-holdtaps-2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---combos-and-holdtaps-3
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---combos-and-holdtaps-4
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---layer-filter-0
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---layer-filter-1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---multiple-timeouts
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---overlapping-combos-0
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---overlapping-combos-1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---overlapping-combos-2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---overlapping-combos-3
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---overlapping-combos-4-different-timeouts
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---partially-overlapping-combos
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-release-long-combo-complete
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-release-long-combo-incomplete
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-release-long-combo-wrong-last-key
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-timeout
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press1-press2-release1-release2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press1-press2-release2-release1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press1-release1-press2-release2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---require-prior-idle
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---slowrelease-disabled
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---slowrelease-enabled
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---conditional-layer
+|       |       |   +---chained-activation
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---mo-overlap
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---multiple-configs
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---quad-layer
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---same-layer-reached-both-ways
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---same-layer-reached-differently
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---tri-layer
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---tri-layer-alt-order
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---tri-layer-lt
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---encoders
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---layers-1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---layers-2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---rotate
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---gresc
+|       |       |   +---gresc-press-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---gresc-two-instances
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---hold-tap
+|       |       |   |   README.md
+|       |       |   |   zmk-modtap-proposal.odg
+|       |       |   |   zmk-modtap-proposal.pdf
+|       |       |   |   
+|       |       |   +---balanced
+|       |       |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   
+|       |       |   |   +---1-dn-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---2-dn-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3a-moddn-dn-modup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3b-moddn-dn-modup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3c-kcdn-dn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3d-kcdn-dn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-htdn-timer-htup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-kcdn-timer-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4b-dn-kcdn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4c-dn-kcdn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4d-dn-kcdn-timer-up-kcup
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---5-quick-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---6-retro-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---7-positional
+|       |       |   |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   |   
+|       |       |   |   |   +---2-dn-timer-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-ntgdn-timer-ntgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-tgdn-timer-tgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-no-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   \---tgdn-dn-ntgdn-timer-ntgup-tgup-up
+|       |       |   |   |           events.patterns
+|       |       |   |   |           keycode_events.snapshot
+|       |       |   |   |           native_posix_64.keymap
+|       |       |   |   |           
+|       |       |   |   +---8-require-prior-idle
+|       |       |   |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   |   
+|       |       |   |   |   +---1-basic
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   \---2-double-hold
+|       |       |   |   |           events.patterns
+|       |       |   |   |           keycode_events.snapshot
+|       |       |   |   |           native_posix_64.keymap
+|       |       |   |   |           
+|       |       |   |   \---many-nested
+|       |       |   |           events.patterns
+|       |       |   |           keycode_events.snapshot
+|       |       |   |           native_posix_64.keymap
+|       |       |   |           
+|       |       |   +---hold-preferred
+|       |       |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   
+|       |       |   |   +---1-dn-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---2-dn-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3a-moddn-dn-modup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3b-moddn-dn-modup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3c-kcdn-dn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3d-kcdn-dn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-htdn-timer-htup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-kcdn-timer-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4b-dn-kcdn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4c-dn-kcdn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4d-dn-kcdn-timer-up-kcup
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---5-quick-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---6-retro-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---7-positional
+|       |       |   |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   |   
+|       |       |   |   |   +---2-dn-timer-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-ntgdn-timer-ntgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-tgdn-timer-tgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-no-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   \---tgdn-dn-ntgdn-timer-ntgup-tgup-up
+|       |       |   |   |           events.patterns
+|       |       |   |   |           keycode_events.snapshot
+|       |       |   |   |           native_posix_64.keymap
+|       |       |   |   |           
+|       |       |   |   \---8-require-prior-idle
+|       |       |   |       |   behavior_keymap.dtsi
+|       |       |   |       |   
+|       |       |   |       +---1-basic
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       \---2-double-hold
+|       |       |   |               events.patterns
+|       |       |   |               keycode_events.snapshot
+|       |       |   |               native_posix_64.keymap
+|       |       |   |               
+|       |       |   +---hold-while-undecided
+|       |       |   |   +---1-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---2-hold
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3-linger
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   \---4-linger-sk
+|       |       |   |           events.patterns
+|       |       |   |           keycode_events.snapshot
+|       |       |   |           native_posix_64.keymap
+|       |       |   |           
+|       |       |   +---tap-preferred
+|       |       |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   
+|       |       |   |   +---1-dn-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---2-dn-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3a-moddn-dn-modup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3b-moddn-dn-modup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3c-kcdn-dn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---3d-kcdn-dn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-htdn-timer-htup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4a-dn-kcdn-timer-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4b-dn-kcdn-kcup-timer-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4c-dn-kcdn-kcup-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---4d-dn-kcdn-timer-up-kcup
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---5-quick-tap
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---6-nested-timeouts
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---7-positional
+|       |       |   |   |   |   behavior_keymap.dtsi
+|       |       |   |   |   |   
+|       |       |   |   |   +---2-dn-timer-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-ntgdn-timer-ntgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---4a-dn-tgdn-timer-tgup-up
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-no-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   +---on-release-trigger
+|       |       |   |   |   |       events.patterns
+|       |       |   |   |   |       keycode_events.snapshot
+|       |       |   |   |   |       native_posix_64.keymap
+|       |       |   |   |   |       
+|       |       |   |   |   \---tgdn-dn-ntgdn-timer-ntgup-tgup-up
+|       |       |   |   |           events.patterns
+|       |       |   |   |           keycode_events.snapshot
+|       |       |   |   |           native_posix_64.keymap
+|       |       |   |   |           
+|       |       |   |   \---8-require-prior-idle
+|       |       |   |       |   behavior_keymap.dtsi
+|       |       |   |       |   
+|       |       |   |       +---1-basic
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       \---2-double-hold
+|       |       |   |               events.patterns
+|       |       |   |               keycode_events.snapshot
+|       |       |   |               native_posix_64.keymap
+|       |       |   |               
+|       |       |   \---tap-unless-interrupted
+|       |       |       |   behavior_keymap.dtsi
+|       |       |       |   
+|       |       |       +---1-dn-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---2-dn-timer-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---3a-moddn-dn-modup-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---3b-moddn-dn-modup-timer-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---3c-kcdn-dn-kcup-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---3d-kcdn-dn-kcup-timer-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---4a-dn-htdn-timer-htup-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---4a-dn-kcdn-timer-kcup-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---4b-dn-kcdn-kcup-timer-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---4c-dn-kcdn-kcup-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---4d-dn-kcdn-timer-up-kcup
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---5-quick-tap
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       \---6-require-prior-idle
+|       |       |           |   behavior_keymap.dtsi
+|       |       |           |   
+|       |       |           +---1-basic
+|       |       |           |       events.patterns
+|       |       |           |       keycode_events.snapshot
+|       |       |           |       native_posix_64.keymap
+|       |       |           |       
+|       |       |           \---2-double-hold
+|       |       |                   events.patterns
+|       |       |                   keycode_events.snapshot
+|       |       |                   native_posix_64.keymap
+|       |       |                   
+|       |       +---key-repeat
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---ignore-other-usage-page-events
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-and-release-after-key-usage
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix.keymap
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-and-release-with-explicit-modifiers
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---send-nothing-if-no-keys-pressed-yet
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---tap-when-rolling
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix.keymap
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---keypress
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   \---kp-press-release
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---keytoggle
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---kt-alt-tab
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---kt-modded-alpha
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---kt-off
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---kt-on
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---kt-press-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---kt-press-release-nkro
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.conf
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---macros
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---basic
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---mo-plus-modifier-from-hold-tap
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---mo-plus-modifier-macro
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---param-then-no-param
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---place-holder-parameters
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-mid-macro
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---press-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---timing-override
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---wait-macro-release
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---mod-morph
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---1-no-morph
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2a-masked-morph
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2b-masked-morph-implicit-overwrite
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2c-masked-morph-and-explicit-mods
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2d-masked-morph-into-hold-tap-tap
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2e-masked-morph-into-hold-tap-hold
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---3-unmasked-morph
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---modifiers
+|       |       |   +---explicit
+|       |       |   |   +---kp-hyper-dn-a-dn-a-up-hyper-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---kp-lctl-dn-lctl-dn-lctl-up-lctl-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---kp-lctl-dn-lctl-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---kp-lctl-dn-lsft-dn-lctl-up-lsft-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   \---kp-lctl-dn-lsft-dn-lsft-up-lctl-up
+|       |       |   |           events.patterns
+|       |       |   |           keycode_events.snapshot
+|       |       |   |           native_posix_64.keymap
+|       |       |   |           
+|       |       |   +---implicit
+|       |       |   |   +---kp-mod1-dn-mod2-dn-mod1-up-mod2-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       pending
+|       |       |   |   |       
+|       |       |   |   +---kp-mod1-dn-mod2-dn-mod2-up-mod1-up
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   \---kp-rolling-symbols-same-key
+|       |       |   |           events.patterns
+|       |       |   |           keycode_events.snapshot
+|       |       |   |           native_posix_64.keymap
+|       |       |   |           
+|       |       |   \---mixed
+|       |       |       +---kp-lctl-dn-mod-dn-lctl-up-mod-up
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       \---kp-lctl-dn-mod-dn-mod-up-lctl-up
+|       |       |               events.patterns
+|       |       |               keycode_events.snapshot
+|       |       |               native_posix_64.keymap
+|       |       |               
+|       |       +---momentary-layer
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---1-normal
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2-early-key-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3-covered
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---4-nested
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---5-nested-early-key-release
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---none
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---layered
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---normal
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix.keymap
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---pointing
+|       |       |   +---mkp
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix.keymap
+|       |       |   |       native_posix_64.conf
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---mouse-move
+|       |       |   |   +---move_diagonal
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.conf
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---move_x
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.conf
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   +---move_y
+|       |       |   |   |       events.patterns
+|       |       |   |   |       keycode_events.snapshot
+|       |       |   |   |       native_posix_64.conf
+|       |       |   |   |       native_posix_64.keymap
+|       |       |   |   |       
+|       |       |   |   \---processors
+|       |       |   |       +---behaviors_basic
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.conf
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       +---behaviors_hold_tap
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.conf
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       +---move_diagonal_scaling
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.conf
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       +---move_diagonal_xy_invert
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.conf
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       +---move_diagonal_xy_swap
+|       |       |   |       |       events.patterns
+|       |       |   |       |       keycode_events.snapshot
+|       |       |   |       |       native_posix_64.conf
+|       |       |   |       |       native_posix_64.keymap
+|       |       |   |       |       
+|       |       |   |       \---temp_layer
+|       |       |   |           +---1-deactivate-layer-timeout
+|       |       |   |           |       events.patterns
+|       |       |   |           |       keycode_events.snapshot
+|       |       |   |           |       native_posix_64.conf
+|       |       |   |           |       native_posix_64.keymap
+|       |       |   |           |       
+|       |       |   |           +---2a-deactivate-layer-position-trigger
+|       |       |   |           |       events.patterns
+|       |       |   |           |       keycode_events.snapshot
+|       |       |   |           |       native_posix_64.conf
+|       |       |   |           |       native_posix_64.keymap
+|       |       |   |           |       
+|       |       |   |           +---2b-deactivate-layer-position-not-trigger
+|       |       |   |           |       events.patterns
+|       |       |   |           |       keycode_events.snapshot
+|       |       |   |           |       native_posix_64.conf
+|       |       |   |           |       native_posix_64.keymap
+|       |       |   |           |       
+|       |       |   |           +---3-require-prior-idle-ms
+|       |       |   |           |       events.patterns
+|       |       |   |           |       keycode_events.snapshot
+|       |       |   |           |       native_posix_64.conf
+|       |       |   |           |       native_posix_64.keymap
+|       |       |   |           |       
+|       |       |   |           \---4-deactivated-layer-externally
+|       |       |   |                   events.patterns
+|       |       |   |                   keycode_events.snapshot
+|       |       |   |                   native_posix_64.conf
+|       |       |   |                   native_posix_64.keymap
+|       |       |   |                   
+|       |       |   \---mouse-scroll
+|       |       |       +---move_diagonal
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.conf
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---move_hwheel
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.conf
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       +---move_wheel
+|       |       |       |       events.patterns
+|       |       |       |       keycode_events.snapshot
+|       |       |       |       native_posix_64.conf
+|       |       |       |       native_posix_64.keymap
+|       |       |       |       
+|       |       |       \---processors
+|       |       |           +---move_diagonal_scaling
+|       |       |           |       events.patterns
+|       |       |           |       keycode_events.snapshot
+|       |       |           |       native_posix_64.conf
+|       |       |           |       native_posix_64.keymap
+|       |       |           |       
+|       |       |           \---move_diagonal_xy_invert
+|       |       |                   events.patterns
+|       |       |                   keycode_events.snapshot
+|       |       |                   native_posix_64.conf
+|       |       |                   native_posix_64.keymap
+|       |       |                   
+|       |       +---sticky-keys
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---1-os-dn-up
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---10-callum-mods
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---10-callum-mods-quick-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---10-sl-sl-kp
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---11-lazy
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---11-lazy-timeout
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---11-lazy-timeout-during
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---12-macro
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---12-same-position-mods
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---12-same-position-sk-sl
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2-os-dn-up-kcdn-kcup
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2-os-dn-up-kcdn-kcup-quick-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2-sl-dn-up-kcdn-kcup
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3a-os-dn-kcdn-kcup-up
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3b-os-dn-kcdn-up-kcup
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---4-os-dn-up-kcdn-timer-kcup
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---5-os-kcdn-dn-kcup-up
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---7-os-dn-up-kc1dn-kc2dn-kc1up-kc2up
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---8-lsk-osk-combination
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---8-lsk-osk-combination-quick-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---9-sk-dn-up-dn-up
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---tap-dance
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---1a-tap1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---1b-tap2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---1c-tap3
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2a-hold1
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2b-hold2
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---2c-hold3
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3a-tap-int-mid
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3b-tap-int-seq
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3c-tap-int-after
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3d-hold-int-mid
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3e-hold-int-seq
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---3f-hold-int-after
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---4a-single
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---5a-tdint-mid
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---5b-tdint-seq
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---5c-tdint-after
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---5d-tdint-multiple
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---6-combo-tap2
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---to-layer
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   \---normal
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---toggle-layer
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---early-key-release
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---normal
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   +---toggle-mode-off
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---toggle-mode-on
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       +---transparent
+|       |       |   |   behavior_keymap.dtsi
+|       |       |   |   
+|       |       |   +---layered
+|       |       |   |       events.patterns
+|       |       |   |       keycode_events.snapshot
+|       |       |   |       native_posix_64.keymap
+|       |       |   |       
+|       |       |   \---normal
+|       |       |           events.patterns
+|       |       |           keycode_events.snapshot
+|       |       |           native_posix_64.keymap
+|       |       |           
+|       |       \---wpm
+|       |           |   behavior_keymap.dtsi
+|       |           |   
+|       |           +---1-single_keypress
+|       |           |       events.patterns
+|       |           |       keycode_events.snapshot
+|       |           |       native_posix_64.conf
+|       |           |       native_posix_64.keymap
+|       |           |       
+|       |           \---2-multiple_keypress
+|       |                   events.patterns
+|       |                   keycode_events.snapshot
+|       |                   native_posix_64.conf
+|       |                   native_posix_64.keymap
+|       |                   
+|       +---docs
+|       |   |   .gitignore
+|       |   |   .nvmrc
+|       |   |   .prettierignore
+|       |   |   .prettierrc.js
+|       |   |   docusaurus.config.js
+|       |   |   eslint.config.mjs
+|       |   |   netlify-ignore-command.sh
+|       |   |   netlify.toml
+|       |   |   package-lock.json
+|       |   |   package.json
+|       |   |   README.md
+|       |   |   sidebars.js
+|       |   |   tsconfig.json
+|       |   |   
+|       |   +---blog
+|       |   |   |   2020-05-24-wip.md
+|       |   |   |   2020-08-12-zmk-sotf-1.md
+|       |   |   |   2020-09-21-zmk-sotf-2.md
+|       |   |   |   2020-10-03-bootloader-fix.md
+|       |   |   |   2020-11-09-zmk-sotf-3.md
+|       |   |   |   2021-01-27-zmk-sotf-4.md
+|       |   |   |   2021-07-17-zephyr-2-5.md
+|       |   |   |   2022-03-08-zephyr-3-0-upgrade-prep.md
+|       |   |   |   2022-04-02-zephyr-3-0.md
+|       |   |   |   2022-04-10-zmk-sotf-5.md
+|       |   |   |   2022-04-21-zmk-2yo.md
+|       |   |   |   2023-04-06-zephyr-3-2.md
+|       |   |   |   2023-06-18-encoder-refactors.md
+|       |   |   |   2023-10-05-zmk-sotf-6.md
+|       |   |   |   2023-11-09-keymap-editor.mdx
+|       |   |   |   2023-12-17-nodefree-config.md
+|       |   |   |   2024-01-05-zmk-tools.md
+|       |   |   |   2024-02-09-zephyr-3-5.md
+|       |   |   |   2024-11-11-zmk-studio-mvp-ga.mdx
+|       |   |   |   2025-03-20-contributor-sync-1.md
+|       |   |   |   2025-06-20-pinned-zmk.md
+|       |   |   |   authors.yml
+|       |   |   |   
+|       |   |   \---assets
+|       |   |       +---2022-04-21-zmk-2yo
+|       |   |       |       first-zmk-keyboard.jpg
+|       |   |       |       kyria-first-split.jpg
+|       |   |       |       
+|       |   |       +---2023-11-09-keymap-editor
+|       |   |       |       editor-screenshot-dark.png
+|       |   |       |       editor-screenshot-light.png
+|       |   |       |       
+|       |   |       +---2024-11-11-zmk-studio-mvp-ga
+|       |   |       |       cannonkeys-dark-mode.png
+|       |   |       |       cannonkeys.png
+|       |   |       |       deskhero-dark-mode.webp
+|       |   |       |       deskhero.webp
+|       |   |       |       keebio.avif
+|       |   |       |       keebmaker-dark-mode.png
+|       |   |       |       keebmaker.png
+|       |   |       |       keycapsss-dark-mode.png
+|       |   |       |       keycapsss.png
+|       |   |       |       keychron-dark-mode.png
+|       |   |       |       keychron.png
+|       |   |       |       kinesis-dark-mode.png
+|       |   |       |       kinesis.png
+|       |   |       |       littlekeyboards-dark-mode.avif
+|       |   |       |       littlekeyboards.avif
+|       |   |       |       mechlovin-dark-mode.png
+|       |   |       |       mechlovin.png
+|       |   |       |       mekibo-dark-mode.png
+|       |   |       |       mekibo.png
+|       |   |       |       mode-dark-mode.png
+|       |   |       |       mode.png
+|       |   |       |       niceandtyperactive-dark-mode.png
+|       |   |       |       niceandtyperactive.png
+|       |   |       |       phasebyte.png
+|       |   |       |       splitkb-dark-mode.png
+|       |   |       |       splitkb.png
+|       |   |       |       zmk-studio-screenshot-dark-mode.png
+|       |   |       |       zmk-studio-screenshot.png
+|       |   |       |       
+|       |   |       \---2025-06-20-pinned-zmk
+|       |   |               release1.png
+|       |   |               release2.png
+|       |   |               
+|       |   +---docs
+|       |   |   |   customization.md
+|       |   |   |   faq.md
+|       |   |   |   hardware.mdx
+|       |   |   |   intro.mdx
+|       |   |   |   keymap-example.md
+|       |   |   |   user-setup-cli.mdx
+|       |   |   |   user-setup.mdx
+|       |   |   |   
+|       |   |   +---assets
+|       |   |   |   +---dev-setup
+|       |   |   |   |       vscode_devcontainer.png
+|       |   |   |   |       
+|       |   |   |   +---features
+|       |   |   |   |   \---beta-testing
+|       |   |   |   |           pr-repo-branch.png
+|       |   |   |   |           repo-branch.png
+|       |   |   |   |           repo-url.png
+|       |   |   |   |           
+|       |   |   |   +---hardware-integration
+|       |   |   |   |       numpad.svg
+|       |   |   |   |       shift-register-daisy.png
+|       |   |   |   |       
+|       |   |   |   +---hold-tap
+|       |   |   |   |       case1_2.svg
+|       |   |   |   |       case_hold_preferred.svg
+|       |   |   |   |       comparison.svg
+|       |   |   |   |       
+|       |   |   |   +---interconnects
+|       |   |   |   |   +---arduino_uno
+|       |   |   |   |   |       pinout.png
+|       |   |   |   |   |       
+|       |   |   |   |   +---blackpill
+|       |   |   |   |   |       pinout.png
+|       |   |   |   |   |       
+|       |   |   |   |   +---pro_micro
+|       |   |   |   |   |       pinout.png
+|       |   |   |   |   |       
+|       |   |   |   |   \---seeed_xiao
+|       |   |   |   |           pinout.png
+|       |   |   |   |           
+|       |   |   |   +---keymaps
+|       |   |   |   |       layer-diagram.png
+|       |   |   |   |       
+|       |   |   |   +---tap-dance
+|       |   |   |   |       timing_diagram.svg
+|       |   |   |   |       
+|       |   |   |   +---troubleshooting
+|       |   |   |   |   +---building
+|       |   |   |   |   |       devicetree-step.png
+|       |   |   |   |   |       kconfig-step.png
+|       |   |   |   |   |       
+|       |   |   |   |   +---filetransfer
+|       |   |   |   |   |       linux.png
+|       |   |   |   |   |       mac.png
+|       |   |   |   |   |       windows.png
+|       |   |   |   |   |       
+|       |   |   |   |   \---multimeter
+|       |   |   |   |           schematic_probe_example.png
+|       |   |   |   |           
+|       |   |   |   +---usb-logging
+|       |   |   |   |       com.jpg
+|       |   |   |   |       putty.jpg
+|       |   |   |   |       
+|       |   |   |   \---user-setup
+|       |   |   |           firmware-archive.png
+|       |   |   |           github-actions-link.png
+|       |   |   |           
+|       |   |   +---config
+|       |   |   |       battery.md
+|       |   |   |       behaviors.md
+|       |   |   |       bluetooth.md
+|       |   |   |       combos.md
+|       |   |   |       displays.md
+|       |   |   |       encoders.md
+|       |   |   |       index.md
+|       |   |   |       keymap.md
+|       |   |   |       kscan.md
+|       |   |   |       layout.md
+|       |   |   |       lighting.md
+|       |   |   |       pointing.md
+|       |   |   |       power.md
+|       |   |   |       split.md
+|       |   |   |       studio.md
+|       |   |   |       system.md
+|       |   |   |       
+|       |   |   +---development
+|       |   |   |   |   module-creation.md
+|       |   |   |   |   new-behavior.mdx
+|       |   |   |   |   studio-rpc-protocol.md
+|       |   |   |   |   usb-logging.mdx
+|       |   |   |   |   
+|       |   |   |   +---contributing
+|       |   |   |   |       clean-room.md
+|       |   |   |   |       documentation.md
+|       |   |   |   |       pull-requests.md
+|       |   |   |   |       
+|       |   |   |   +---hardware-integration
+|       |   |   |   |   |   battery.md
+|       |   |   |   |   |   dongle.mdx
+|       |   |   |   |   |   encoders.md
+|       |   |   |   |   |   hardware-metadata-files.md
+|       |   |   |   |   |   index.mdx
+|       |   |   |   |   |   new-shield.mdx
+|       |   |   |   |   |   physical-layouts.md
+|       |   |   |   |   |   pinctrl.mdx
+|       |   |   |   |   |   pointing.mdx
+|       |   |   |   |   |   shift-registers.md
+|       |   |   |   |   |   soft-off-setup.mdx
+|       |   |   |   |   |   
+|       |   |   |   |   +---includes
+|       |   |   |   |   |       _gpio-key-direct.md
+|       |   |   |   |   |       _gpio-key-matrix.md
+|       |   |   |   |   |       _gpio-key-wakeup.md
+|       |   |   |   |   |       _sideband-direct.md
+|       |   |   |   |   |       _sideband-matrix.md
+|       |   |   |   |   |       _sideband-wakeup-direct.md
+|       |   |   |   |   |       _soft-off-behavior.md
+|       |   |   |   |   |       _soft-off-waker.md
+|       |   |   |   |   |       
+|       |   |   |   |   \---lighting
+|       |   |   |   |           backlight.mdx
+|       |   |   |   |           index.mdx
+|       |   |   |   |           underglow.md
+|       |   |   |   |           
+|       |   |   |   \---local-toolchain
+|       |   |   |       |   build-flash.mdx
+|       |   |   |       |   ide-integration.mdx
+|       |   |   |       |   posix-board.md
+|       |   |   |       |   pre-commit.md
+|       |   |   |       |   tests.md
+|       |   |   |       |   
+|       |   |   |       \---setup
+|       |   |   |               container.mdx
+|       |   |   |               index.md
+|       |   |   |               native.mdx
+|       |   |   |               
+|       |   |   +---features
+|       |   |   |       battery.md
+|       |   |   |       bluetooth.md
+|       |   |   |       debouncing.md
+|       |   |   |       displays.md
+|       |   |   |       encoders.md
+|       |   |   |       lighting.md
+|       |   |   |       low-power-states.md
+|       |   |   |       modules.mdx
+|       |   |   |       pointing.md
+|       |   |   |       split-keyboards.md
+|       |   |   |       studio.md
+|       |   |   |       
+|       |   |   +---keymaps
+|       |   |   |   |   combos.md
+|       |   |   |   |   conditional-layers.md
+|       |   |   |   |   index.mdx
+|       |   |   |   |   list-of-keycodes.mdx
+|       |   |   |   |   modifiers.mdx
+|       |   |   |   |   
+|       |   |   |   +---behaviors
+|       |   |   |   |       backlight.md
+|       |   |   |   |       bluetooth.md
+|       |   |   |   |       caps-word.md
+|       |   |   |   |       hold-tap.mdx
+|       |   |   |   |       index.mdx
+|       |   |   |   |       key-press.md
+|       |   |   |   |       key-repeat.md
+|       |   |   |   |       key-toggle.md
+|       |   |   |   |       layers.md
+|       |   |   |   |       macros.md
+|       |   |   |   |       misc.md
+|       |   |   |   |       mod-morph.md
+|       |   |   |   |       mouse-emulation.md
+|       |   |   |   |       outputs.md
+|       |   |   |   |       power.md
+|       |   |   |   |       reset.md
+|       |   |   |   |       sensor-rotate.md
+|       |   |   |   |       soft-off.md
+|       |   |   |   |       sticky-key.md
+|       |   |   |   |       sticky-layer.md
+|       |   |   |   |       studio-unlock.md
+|       |   |   |   |       tap-dance.mdx
+|       |   |   |   |       underglow.md
+|       |   |   |   |       
+|       |   |   |   +---input-processors
+|       |   |   |   |       behaviors.md
+|       |   |   |   |       code-mapper.md
+|       |   |   |   |       index.md
+|       |   |   |   |       scaler.md
+|       |   |   |   |       temp-layer.md
+|       |   |   |   |       transformer.md
+|       |   |   |   |       usage.md
+|       |   |   |   |       
+|       |   |   |   \---_footnotes
+|       |   |   |           example.mdx
+|       |   |   |           globe.mdx
+|       |   |   |           ios-application.mdx
+|       |   |   |           ios-power.mdx
+|       |   |   |           macos-power.mdx
+|       |   |   |           
+|       |   |   \---troubleshooting
+|       |   |           building-issues.md
+|       |   |           connection-issues.mdx
+|       |   |           flashing-issues.md
+|       |   |           hardware-issues.mdx
+|       |   |           index.mdx
+|       |   |           
+|       |   +---src
+|       |   |   |   .gitignore
+|       |   |   |   footnotes.js
+|       |   |   |   groups.js
+|       |   |   |   hid-usage.js
+|       |   |   |   hid.js
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   |   columns.tsx
+|       |   |   |   |   custom-board-form.js
+|       |   |   |   |   hardware-list.tsx
+|       |   |   |   |   hardware-utils.ts
+|       |   |   |   |   interconnect-tabs.tsx
+|       |   |   |   |   power-estimate.js
+|       |   |   |   |   
+|       |   |   |   +---codes
+|       |   |   |   |       Context.jsx
+|       |   |   |   |       Description.jsx
+|       |   |   |   |       Footnote.jsx
+|       |   |   |   |       FootnoteRef.jsx
+|       |   |   |   |       FootnoteRefs.jsx
+|       |   |   |   |       Footnotes.jsx
+|       |   |   |   |       LinkIcon.jsx
+|       |   |   |   |       Name.jsx
+|       |   |   |   |       OsLegend.jsx
+|       |   |   |   |       OsSupport.jsx
+|       |   |   |   |       OsSupportIcon.jsx
+|       |   |   |   |       Table.jsx
+|       |   |   |   |       TableRow.jsx
+|       |   |   |   |       ToastyContainer.jsx
+|       |   |   |   |       ToastyCopyToClipboard.jsx
+|       |   |   |   |       
+|       |   |   |   \---KeymapUpgrader
+|       |   |   |           index.jsx
+|       |   |   |           styles.module.css
+|       |   |   |           
+|       |   |   +---css
+|       |   |   |       codes.css
+|       |   |   |       custom.css
+|       |   |   |       power-estimate.css
+|       |   |   |       power-profiler.css
+|       |   |   |       
+|       |   |   +---data
+|       |   |   |   |   .gitignore
+|       |   |   |   |   footnotes.js
+|       |   |   |   |   groups.js
+|       |   |   |   |   hid-applications.js
+|       |   |   |   |   hid-usage-pages.js
+|       |   |   |   |   hid.js
+|       |   |   |   |   operating-systems.js
+|       |   |   |   |   power.js
+|       |   |   |   |   
+|       |   |   |   \---interconnects
+|       |   |   |           .gitignore
+|       |   |   |           
+|       |   |   +---docusaurus-tree-sitter-plugin
+|       |   |   |       index.js
+|       |   |   |       
+|       |   |   +---hardware-metadata-collection-plugin
+|       |   |   |       index.js
+|       |   |   |       
+|       |   |   +---hardware-metadata-static-plugin
+|       |   |   |       index.js
+|       |   |   |       
+|       |   |   +---hardware-schema-typescript-plugin
+|       |   |   |       index.js
+|       |   |   |       
+|       |   |   +---keymap-upgrade
+|       |   |   |       behaviors.ts
+|       |   |   |       encoder.ts
+|       |   |   |       headers.ts
+|       |   |   |       index.ts
+|       |   |   |       keycodes.ts
+|       |   |   |       nodes.ts
+|       |   |   |       parser.ts
+|       |   |   |       properties.ts
+|       |   |   |       textedit.ts
+|       |   |   |       
+|       |   |   +---pages
+|       |   |   |       index.js
+|       |   |   |       keymap-upgrader.mdx
+|       |   |   |       power-profiler.js
+|       |   |   |       styles.module.css
+|       |   |   |       
+|       |   |   +---setup-script-generation-plugin
+|       |   |   |       index.js
+|       |   |   |       
+|       |   |   +---templates
+|       |   |   |       setup.ps1.mustache
+|       |   |   |       setup.sh.mustache
+|       |   |   |       
+|       |   |   +---theme
+|       |   |   |   |   prism-include-languages.js
+|       |   |   |   |   
+|       |   |   |   \---prism
+|       |   |   |       +---components
+|       |   |   |       |       prism-devicetree.js
+|       |   |   |       |       prism-kconfig.js
+|       |   |   |       |       
+|       |   |   |       \---themes
+|       |   |   |               github-dark-dimmed.js
+|       |   |   |               github.js
+|       |   |   |               
+|       |   |   \---utils
+|       |   |           hooks.js
+|       |   |           
+|       |   \---static
+|       |       |   .gitignore
+|       |       |   _redirects
+|       |       |   
+|       |       \---img
+|       |               favicon.ico
+|       |               undraw_open_source.svg
+|       |               undraw_wireless.svg
+|       |               undraw_zephyr.svg
+|       |               zmk_logo.svg
+|       |               
+|       \---schema
+|               hardware-metadata.schema.json
+|               
++---config
+|   |   Mkorne.keymap
+|   |   nice_view.overlay
+|   |   west.yml
+|   |   
+|   \---boards
+|       \---shields
+|           |   .gitkeep
+|           |   
+|           \---Mkorne
+|                   Mkorne.conf
+|                   Mkorne.dtsi
+|                   Mkorne_left.conf
+|                   Mkorne_left.overlay
+|                   Mkorne_right.conf
+|                   Mkorne_right.overlay
+|                   Kconfig.defconfig
+|                   Kconfig.shield
+|                   
+\---zephyr
+        module.yml
+        
