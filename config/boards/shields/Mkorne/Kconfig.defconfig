@@ -1,14 +1,14 @@
-if SHIELD_MKORNE_LEFT
+if SHIELD_MKorne_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Mkorne"
+    default "MKorne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_MKORNE_LEFT || SHIELD_MKORNE_RIGHT
+if SHIELD_MKorne_LEFT || SHIELD_MKorne_RIGHT
 
 config ZMK_SPLIT
     default y
