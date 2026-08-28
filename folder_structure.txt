@@ -3882,7 +3882,7 @@ C:.
 |               hardware-metadata.schema.json
 |               
 +---config
-|   |   Mkorne.keymap
+|   |   MKorne.keymap
 |   |   nice_view.overlay
 |   |   west.yml
 |   |   
@@ -3890,13 +3890,13 @@ C:.
 |       \---shields
 |           |   .gitkeep
 |           |   
-|           \---Mkorne
-|                   Mkorne.conf
-|                   Mkorne.dtsi
-|                   Mkorne_left.conf
-|                   Mkorne_left.overlay
-|                   Mkorne_right.conf
-|                   Mkorne_right.overlay
+|           \---MKorne
+|                   MKorne.conf
+|                   MKorne.dtsi
+|                   MKorne_left.conf
+|                   MKorne_left.overlay
+|                   MKorne_right.conf
+|                   MKorne_right.overlay
 |                   Kconfig.defconfig
 |                   Kconfig.shield
 |                   
