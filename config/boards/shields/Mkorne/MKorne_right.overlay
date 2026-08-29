@@ -1,1 +1,8 @@
 #include "MKorne.dtsi"
+
+/* Right half is the peripheral. Its local matrix also scans columns 0-5,
+ * so shift them to 6-11 to line up with the right-side entries in
+ * default_transform (RC(x,6)..RC(x,11)). */
+&default_transform {
+    col-offset = <6>;
+};
