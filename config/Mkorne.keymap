@@ -31,9 +31,9 @@
 // |   Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  |
 //              | SPC | SPC | SPC |     | SPC | LOW |LARW |
                         bindings = <
-   &bt BT_CLR     &kp UP     &trans      &trans      &trans                     &kp KP_NUMBER_7      &kp KP_NUMBER_8   &kp KP_NUMBER_9      &kp HOME     &kp PAGE_UP
-   &kp LEFT   &kp DOWN   &kp RIGHT   &trans      &trans                        &kp KP_NUMBER_4      &kp KP_NUMBER_5   &kp KP_NUMBER_6      &kp END      &kp PAGE_DOWN
-   &bt BT_CLR_ALL &trans     &trans      &trans      &trans                    &kp KP_NUMBER_1      &kp KP_NUMBER_2   &kp KP_NUMBER_3      &kp DELETE   &kp INSERT
+   &trans   &bt BT_CLR     &kp UP     &trans      &trans      &trans                     &kp KP_NUMBER_7      &kp KP_NUMBER_8   &kp KP_NUMBER_9      &kp HOME     &kp PAGE_UP     &trans
+   &trans   &kp LEFT   &kp DOWN   &kp RIGHT   &trans      &trans                        &kp KP_NUMBER_4      &kp KP_NUMBER_5   &kp KP_NUMBER_6      &kp END      &kp PAGE_DOWN   &trans
+   &trans   &bt BT_CLR_ALL &trans     &trans      &trans      &trans                    &kp KP_NUMBER_1      &kp KP_NUMBER_2   &kp KP_NUMBER_3      &kp DELETE   &kp INSERT      &trans
                                      &trans      &trans   &trans       &trans  &trans   &to 0
                         >;
                 };
