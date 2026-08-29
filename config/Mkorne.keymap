@@ -1,3 +1,4 @@
+```c
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -10,35 +11,63 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // ================================================================
+        // DEFAULT LAYER
+        // Regular 6-column Corne
+        //
+        //   TAB   Q   W   E   R   T   G       Y   U   I   O   P   [
+        //   LALT  A   S   D   F   G   H       J   K   L   ;   '   ]
+        //   LS    Z   X   C   V   B   N       M   ,   .   /   -   =
+        //
+        //           GUI   ALT  SPACE   SPACE  BSPC  LOWER
+        // ================================================================
+
         default_layer {
             bindings = <
                 // Row 1
                 &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T
-                &kp Y         &kp U       &kp I       &kp O       &kp P       &kp BACKSPACE
+                &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BACKSPACE
 
                 // Row 2
                 &kp TAB       &kp A       &kp S       &kp D       &kp F       &kp G
-                &kp H         &kp J       &kp K       &kp L       &kp SEMI     &kp SQT
+                &kp H       &kp J       &kp K       &kp L    &kp SEMI     &kp SQT
 
                 // Row 3
-                &kp LSHIFT    &kp Z       &kp X       &kp C       &kp V       &kp B
-                &kp N         &kp M       &kp COMMA    &kp DOT     &kp MINUS    &kp EQUAL
+                &kp LS       &kp Z       &kp X       &kp C       &kp V       &kp B
+                &kp N       &kp M   &kp COMMA     &kp DOT    &kp MINUS   &kp RS
 
                 // Thumb keys
-                &lt LOWER LGUI
+                &lt 1 LGUI
                 &mt LANG1 LALT
                 &kp SPACE
 
                 &kp ENTER
                 &kp BSPC
-                &mo LOWER
+                &to 1
             >;
         };
+
+
+        // ================================================================
+        // LOWER LAYER
+        //
+        //   BT CLEAR   ↑       -       -       -       -       7   8   9   HOME   PAGE UP   -
+        //   ←          ↓       →       -       -       -       4   5   6   END    PAGE DOWN -
+        //   BT CLR ALL -       -       -       -       -       1   2   3   DEL    INSERT    -
+        //
+        //           -     -     -       -      -      DEFAULT
+        // ================================================================
 
         lower_layer {
             bindings = <
                 // Row 1
-                &bt BT_CLR    &kp UP      &trans      &trans      &trans      &trans
+                &bt BT_CLR
+                &kp UP
+                &trans
+                &trans
+                &trans
+                &trans
+
                 &kp KP_NUMBER_7
                 &kp KP_NUMBER_8
                 &kp KP_NUMBER_9
@@ -47,7 +76,13 @@
                 &trans
 
                 // Row 2
-                &kp LEFT      &kp DOWN    &kp RIGHT   &trans      &trans      &trans
+                &kp LEFT
+                &kp DOWN
+                &kp RIGHT
+                &trans
+                &trans
+                &trans
+
                 &kp KP_NUMBER_4
                 &kp KP_NUMBER_5
                 &kp KP_NUMBER_6
@@ -77,8 +112,9 @@
 
                 &trans
                 &trans
-                &mo DEFAULT
+                &to 0
             >;
         };
     };
 };
+```
