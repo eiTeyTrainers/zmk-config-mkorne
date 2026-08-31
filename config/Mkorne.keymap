@@ -2,10 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
-#define GAMING  1
-#define NUMBERS 2
-
 / {
     behaviors {
 
@@ -25,28 +21,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-
         // ================================================================
-        // REDO / NUMBERS
-        //
-        // Tap  = CTRL + SHIFT + Z
-        // Hold = NUMBERS layer
-        // ================================================================
-        redo_numbers: redo_numbers {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-
-            bindings = <&redo>, <&mo NUMBERS>;
-        };
-
-
-        // ================================================================
-        // REDO
-        //
-        // CTRL + SHIFT + Z
+        // REDO = CTRL + SHIFT + Z
         // ================================================================
         redo: redo {
             compatible = "zmk,behavior-macro";
@@ -55,30 +31,24 @@
             bindings =
                 <&macro_press &kp LCTRL>,
                 <&macro_press &kp LSHIFT>,
-                <&kp Z>,
+                <&macro_tap &kp Z>,
                 <&macro_release &kp LSHIFT>,
                 <&macro_release &kp LCTRL>;
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
-
 
         // ================================================================
         // DEFAULT
         //
-        // CTRL   ALT   SPACE       REDO   BSPC   GAMING
+        // | ESC  | Q | W | E | R | T | Y | U | I | O | P | ENTER |
+        // | TAB  | A | S | D | F | G | H | J | K | L | ; |  '   |
+        // | SHIFT| Z | X | C | V | B | N | M | , | . | / | SHIFT |
         //
-        // REDO:
-        //   Tap  = CTRL + SHIFT + Z
-        //   Hold = NUMBERS
-        //
-        // GAMING:
-        //   Tap = switch to GAMING and stay there
+        //              CTRL | ALT | SPACE | REDO | BSPC | GAMING |
         // ================================================================
-
         default_layer {
             bindings = <
                 &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T
@@ -94,29 +64,24 @@
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &redo_numbers
+                &redo
                 &kp BSPC
                 &tog GAMING
             >;
         };
 
-
         // ================================================================
         // GAMING
         //
-        // Top row:
-        // TAB   1  2  3  4  5 | 6  7  8  9  0  ESC
+        // Gaming is TOGGLE:
+        // Press GAMING once  = enter Gaming
+        // Press GAMING again  = return to Default
         //
-        // Second row:
-        // SHIFT Q  W  E  R  T | Y  U  I  O  P  '
+        // Leftmost column remains:
+        // ESC / TAB / LCTRL
         //
-        // Third row:
-        // CTRL  A  S  D  F  G | H  J  K  L  ;  SHIFT
-        //
-        // Thumbs:
-        // ALT  SPACE  CTRL | REDO  BSPC  DEFAULT
+        // WASD is on the LEFT side.
         // ================================================================
-
         gaming_layer {
             bindings = <
                 &kp TAB       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
@@ -128,30 +93,28 @@
                 &kp LCTRL     &kp A        &kp S        &kp D        &kp F        &kp G
                 &kp H         &kp J        &kp K        &kp L        &kp SEMI     &kp RSHFT
 
+                &kp LCTRL
                 &kp LALT
                 &kp SPACE
-                &kp RCTRL
 
-                &redo
+                &kp LGUI
                 &kp BSPC
-                &tog DEFAULT
+                &to DEFAULT
             >;
         };
-
 
         // ================================================================
         // NUMBERS
         //
-        // Right-hand numpad
+        // Toggle with GAMING/NUM key from Default.
         //
-        //          7   8   9   +
-        //          4   5   6   -
-        //          1   2   3   *
+        // Right-hand numpad:
         //
-        // Bottom:
-        //          0   .   /
+        //       7   8   9   +
+        //       4   5   6   -
+        //       1   2   3   *
+        //       0   .   /
         // ================================================================
-
         numbers_layer {
             bindings = <
                 &trans       &trans       &trans       &trans       &trans       &trans
@@ -159,24 +122,21 @@
                 &kp KP_NUMBER_8
                 &kp KP_NUMBER_9
                 &kp KP_PLUS
-                &trans
-                &trans
+                &trans       &trans
 
                 &trans       &trans       &trans       &trans       &trans       &trans
                 &kp KP_NUMBER_4
                 &kp KP_NUMBER_5
                 &kp KP_NUMBER_6
                 &kp KP_MINUS
-                &trans
-                &trans
+                &trans       &trans
 
                 &trans       &trans       &trans       &trans       &trans       &trans
                 &kp KP_NUMBER_1
                 &kp KP_NUMBER_2
                 &kp KP_NUMBER_3
                 &kp KP_MULTIPLY
-                &trans
-                &trans
+                &trans       &trans
 
                 &trans
                 &trans
