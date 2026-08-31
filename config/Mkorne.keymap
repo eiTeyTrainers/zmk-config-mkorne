@@ -8,6 +8,12 @@
 
 / {
     behaviors {
+
+        // ================================================================
+        // ALT + SHIFT LANGUAGE SWITCH
+        // Tap = LANG1
+        // Hold = ALT
+        // ================================================================
         alt_lang: alt_lang {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -17,6 +23,21 @@
 
             bindings = <&kp>, <&kp>;
         };
+
+        // ================================================================
+        // REDO = CTRL + SHIFT + Z
+        // ================================================================
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp LSHIFT>,
+                <&kp Z>,
+                <&macro_release &kp LSHIFT>,
+                <&macro_release &kp LCTRL>;
+        };
     };
 
     keymap {
@@ -24,6 +45,8 @@
 
         // ================================================================
         // DEFAULT
+        //
+        // CTRL   ALT   SPACE      REDO   BSPC   NUM
         // ================================================================
         default_layer {
             bindings = <
@@ -36,13 +59,13 @@
                 &kp LSHFT     &kp Z       &kp X       &kp C       &kp V       &kp B
                 &kp N         &kp M       &kp COMMA    &kp DOT      &kp SLASH    &kp RSHFT
 
-                &lt GAMING LGUI
+                &kp LCTRL
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &kp RCTRL
+                &redo
                 &kp BSPC
-                &lt NUMBERS RALT
+                &tog NUMBERS
             >;
         };
 
@@ -50,7 +73,10 @@
         // GAMING
         //
         // Top row = numbers
-        // WASD remains in the normal QWERTY positions
+        // WASD stays in normal position
+        //
+        // Press GUI position to return to DEFAULT.
+        // LGUI is available on the bottom-right position.
         // ================================================================
         gaming_layer {
             bindings = <
@@ -61,13 +87,13 @@
                 &kp Y         &kp U        &kp I        &kp O        &kp P        &kp SQT
 
                 &kp LCTRL     &kp A        &kp S        &kp D        &kp F        &kp G
-                &kp H         &kp J        &kp K        &kp L        &kp SEMI      &kp RSHFT
+                &kp H         &kp J        &kp K        &kp L        &kp SEMI     &kp RSHFT
 
                 &kp LALT
                 &kp SPACE
                 &kp RCTRL
 
-                &kp LALT
+                &kp LGUI
                 &kp BSPC
                 &to DEFAULT
             >;
@@ -78,10 +104,12 @@
         //
         // Right-hand numpad
         //
-        //  7  8  9  +
-        //  4  5  6  -
-        //  1  2  3  *
-        //  0  .  /  =
+        //       7   8   9   +
+        //       4   5   6   -
+        //       1   2   3   *
+        //
+        // Bottom:
+        //       0   .   /
         // ================================================================
         numbers_layer {
             bindings = <
