@@ -6,6 +6,11 @@
 #define LOWER   1
 #define RAISE   2
 
+&mt {
+    tapping-term-ms = <200>;
+    hold-while-undecided;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
