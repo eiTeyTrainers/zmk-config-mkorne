@@ -17,10 +17,10 @@
 // |   Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  |
 //              | SPC | SPC | SPC |     | SPC | LOW |LARW |
                         bindings = <
-   &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T                              &kp Y         &kp U       &kp I       &kp O       &kp P       &kp BACKSPACE
+   &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T                              &kp Y         &kp U       &kp I       &kp O       &kp P       &kp ENTER
    &kp TAB       &kp A       &kp S       &kp D       &kp F       &kp G                              &kp H         &kp J       &kp K       &kp L       &kp SEMI     &kp SQT
-   &kp LSHFT     &kp Z       &kp X       &kp C       &kp V       &kp B                              &kp N         &kp M       &kp COMMA    &kp DOT     &kp MINUS    &kp RSHFT
-                       &lt 1 LGUI  &mt LANG1 LALT   &kp SPACE          &kp ENTER  &kp BSPC   &to 1
+   &kp LSHFT     &kp Z       &kp X       &kp C       &kp V       &kp B                              &kp N         &kp M       &kp COMMA    &kp DOT     &kp SLASH    &kp RSHFT
+                       &lt 1 LGUI  &mt LANG1 LALT   &kp SPACE          &kp RCTRL  &kp BSPC   &to 1
                         >;
                 };
 
