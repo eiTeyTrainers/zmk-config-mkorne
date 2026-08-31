@@ -49,12 +49,13 @@
         // ================================================================
         redo_numbers: redo_numbers {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
 
-            bindings = <&redo>, <&mo NUMBERS>;
+            // hold = &mo <param1>, tap = &redo (its param is unused)
+            bindings = <&mo>, <&redo>;
         };
     };
 
@@ -85,7 +86,7 @@
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &redo_numbers
+                &redo_numbers NUMBERS 0
                 &kp BSPC
                 &tog GAMING
             >;
