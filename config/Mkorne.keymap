@@ -11,7 +11,8 @@
 
         // ================================================================
         // ALT + SHIFT LANGUAGE SWITCH
-        // Tap = LANG1
+        //
+        // Tap  = LANG1
         // Hold = ALT
         // ================================================================
         alt_lang: alt_lang {
@@ -24,8 +25,28 @@
             bindings = <&kp>, <&kp>;
         };
 
+
         // ================================================================
-        // REDO = CTRL + SHIFT + Z
+        // REDO / NUMBERS
+        //
+        // Tap  = CTRL + SHIFT + Z
+        // Hold = NUMBERS layer
+        // ================================================================
+        redo_numbers: redo_numbers {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+
+            bindings = <&redo>, <&mo NUMBERS>;
+        };
+
+
+        // ================================================================
+        // REDO
+        //
+        // CTRL + SHIFT + Z
         // ================================================================
         redo: redo {
             compatible = "zmk,behavior-macro";
@@ -40,14 +61,24 @@
         };
     };
 
+
     keymap {
         compatible = "zmk,keymap";
+
 
         // ================================================================
         // DEFAULT
         //
-        // CTRL   ALT   SPACE      REDO   BSPC   NUM
+        // CTRL   ALT   SPACE       REDO   BSPC   GAMING
+        //
+        // REDO:
+        //   tap  = CTRL + SHIFT + Z
+        //   hold = NUMBERS
+        //
+        // GAMING:
+        //   tap = switch to GAMING and stay there
         // ================================================================
+
         default_layer {
             bindings = <
                 &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T
@@ -63,21 +94,22 @@
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &redo
+                &redo_numbers
                 &kp BSPC
-                &tog NUMBERS
+                &tog GAMING
             >;
         };
+
 
         // ================================================================
         // GAMING
         //
-        // Top row = numbers
-        // WASD stays in normal position
+        // Numbers on top row.
+        // WASD stays in normal QWERTY position.
         //
-        // Press GUI position to return to DEFAULT.
-        // LGUI is available on the bottom-right position.
+        // Rightmost thumb = return to DEFAULT.
         // ================================================================
+
         gaming_layer {
             bindings = <
                 &kp ESC       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
@@ -93,11 +125,12 @@
                 &kp SPACE
                 &kp RCTRL
 
-                &kp LGUI
+                &redo
                 &kp BSPC
-                &to DEFAULT
+                &tog DEFAULT
             >;
         };
+
 
         // ================================================================
         // NUMBERS
@@ -108,9 +141,10 @@
         //       4   5   6   -
         //       1   2   3   *
         //
-        // Bottom:
+        // Bottom thumb:
         //       0   .   /
         // ================================================================
+
         numbers_layer {
             bindings = <
                 &trans       &trans       &trans       &trans       &trans       &trans
@@ -118,21 +152,24 @@
                 &kp KP_NUMBER_8
                 &kp KP_NUMBER_9
                 &kp KP_PLUS
-                &trans       &trans
+                &trans
+                &trans
 
                 &trans       &trans       &trans       &trans       &trans       &trans
                 &kp KP_NUMBER_4
                 &kp KP_NUMBER_5
                 &kp KP_NUMBER_6
                 &kp KP_MINUS
-                &trans       &trans
+                &trans
+                &trans
 
                 &trans       &trans       &trans       &trans       &trans       &trans
                 &kp KP_NUMBER_1
                 &kp KP_NUMBER_2
                 &kp KP_NUMBER_3
                 &kp KP_MULTIPLY
-                &trans       &trans
+                &trans
+                &trans
 
                 &trans
                 &trans
