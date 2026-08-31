@@ -72,11 +72,11 @@
         // CTRL   ALT   SPACE       REDO   BSPC   GAMING
         //
         // REDO:
-        //   tap  = CTRL + SHIFT + Z
-        //   hold = NUMBERS
+        //   Tap  = CTRL + SHIFT + Z
+        //   Hold = NUMBERS
         //
         // GAMING:
-        //   tap = switch to GAMING and stay there
+        //   Tap = switch to GAMING and stay there
         // ================================================================
 
         default_layer {
@@ -104,18 +104,25 @@
         // ================================================================
         // GAMING
         //
-        // Numbers on top row.
-        // WASD stays in normal QWERTY position.
+        // Top row:
+        // TAB   1  2  3  4  5 | 6  7  8  9  0  ESC
         //
-        // Rightmost thumb = return to DEFAULT.
+        // Second row:
+        // SHIFT Q  W  E  R  T | Y  U  I  O  P  '
+        //
+        // Third row:
+        // CTRL  A  S  D  F  G | H  J  K  L  ;  SHIFT
+        //
+        // Thumbs:
+        // ALT  SPACE  CTRL | REDO  BSPC  DEFAULT
         // ================================================================
 
         gaming_layer {
             bindings = <
-                &kp ESC       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
-                &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       &kp ENTER
+                &kp TAB       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
+                &kp N6        &kp N7       &kp N8       &kp N9       &kp N0       &kp ESC
 
-                &kp TAB       &kp Q        &kp W        &kp E        &kp R        &kp T
+                &kp LSHFT     &kp Q        &kp W        &kp E        &kp R        &kp T
                 &kp Y         &kp U        &kp I        &kp O        &kp P        &kp SQT
 
                 &kp LCTRL     &kp A        &kp S        &kp D        &kp F        &kp G
@@ -137,12 +144,12 @@
         //
         // Right-hand numpad
         //
-        //       7   8   9   +
-        //       4   5   6   -
-        //       1   2   3   *
+        //          7   8   9   +
+        //          4   5   6   -
+        //          1   2   3   *
         //
-        // Bottom thumb:
-        //       0   .   /
+        // Bottom:
+        //          0   .   /
         // ================================================================
 
         numbers_layer {
