@@ -27,35 +27,66 @@
         };
 
         // ================================================================
-        // REDO = CTRL + SHIFT + Z
+        // UNREAL MACRO
+        //
+        // Ctrl + Alt + F11
         // ================================================================
-        redo: redo {
+        unreal_macro: unreal_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
             bindings =
                 <&macro_press &kp LCTRL>,
-                <&macro_press &kp LSHIFT>,
-                <&macro_tap &kp Z>,
-                <&macro_release &kp LSHIFT>,
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp F11>,
+                <&macro_release &kp LALT>,
                 <&macro_release &kp LCTRL>;
         };
 
         // ================================================================
-        // REDO / NUMBERS
+        // UNREAL MACRO / NUMBERS
         //
-        // Tap  = REDO (CTRL + SHIFT + Z)
-        // Hold = NUMBERS layer  (numpad + Bluetooth controls)
+        // Tap  = Ctrl + Alt + F11
+        // Hold = NUMBERS layer
+        //
+        // NUMBERS layer contains:
+        //   - Bluetooth profile selection
+        //   - Bluetooth clear/output controls
+        //   - Numpad
         // ================================================================
-        redo_numbers: redo_numbers {
+        unreal_numbers: unreal_numbers {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
 
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
 
-            // hold = &mo <param1>, tap = &redo (its param is unused)
-            bindings = <&mo>, <&redo>;
+            // hold = &mo <param1>, tap = &unreal_macro
+            bindings = <&mo>, <&unreal_macro>;
+        };
+
+        // ================================================================
+        // GAMING / DEFAULT LAYER MARKERS
+        //
+        // F13/F14 are sent first so the PC-side overlay can detect
+        // the layer change.
+        // ================================================================
+        gaming_marker: gaming_marker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&macro_tap &kp F13>,
+                <&tog GAMING>;
+        };
+
+        default_marker: default_marker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&macro_tap &kp F14>,
+                <&to DEFAULT>;
         };
     };
 
@@ -69,7 +100,7 @@
         // | TAB  | A | S | D | F | G | H | J | K | L | ; |  '   |
         // | SHIFT| Z | X | C | V | B | N | M | , | . | / | SHIFT |
         //
-        //              CTRL | ALT | SPACE | REDO | BSPC | GAMING |
+        //              CTRL | ALT | SPACE | UNREAL | BSPC | GAMING |
         // ================================================================
         default_layer {
             bindings = <
@@ -86,9 +117,9 @@
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &redo_numbers NUMBERS 0
+                &unreal_numbers NUMBERS 0
                 &kp BSPC
-                &tog GAMING
+                &gaming_marker
             >;
         };
 
@@ -97,12 +128,7 @@
         //
         // Gaming is TOGGLE:
         // Press GAMING once  = enter Gaming
-        // Press GAMING again  = return to Default
-        //
-        // No number row - letters sit in their normal typing position
-        // (same as DEFAULT), so WASD lands where your fingers expect it
-        // and every letter (C, V, B, Z, X, N, M, ...) is reachable for
-        // game binds like crouch / lean / inventory.
+        // Press GAMING again = return to Default
         // ================================================================
         gaming_layer {
             bindings = <
@@ -121,54 +147,48 @@
 
                 &kp LGUI
                 &kp BSPC
-                &to DEFAULT
+                &default_marker
             >;
         };
 
         // ================================================================
-        // NUMBERS   (hold the REDO thumb key to reach this layer)
+        // NUMBERS
         //
-        // LEFT hand = Bluetooth / output controls
+        // Hold the UNREAL thumb key to access this layer.
         //
-        //   -   SEL0  SEL1  SEL2  SEL3  SEL4      <- pick a profile slot
-        //   -   CLR   OUTts  -     -     -        <- clear THIS profile / toggle USB<>BT
-        //   -   CLRA   -     -     -     -        <- clear ALL profiles
+        // LEFT SIDE = Bluetooth / output controls
         //
-        //   BT_SEL n  = switch to Bluetooth profile n (0 = 1st PC, 1 = 2nd PC, ...)
-        //   BT_CLR    = forget the bond on the CURRENTLY selected profile
-        //   BT_CLR_ALL= forget the bonds on ALL 5 profiles
-        //   OUT_TOG   = toggle keyboard output between USB and Bluetooth
+        // |      | BT0 | BT1 | BT2 | BT3 | BT4 |
+        // |      | CLR | OUT |     |     |     |
+        // |      | ALL |     |     |     |     |
         //
-        // RIGHT hand = numpad:
+        // RIGHT SIDE = NUMPAD
         //
-        //       7   8   9   +
-        //       4   5   6   -
-        //       1   2   3   *
-        //       0   .   /
+        // |  7 |  8 |  9 |  + |     |     |
+        // |  4 |  5 |  6 |  - |     |     |
+        // |  1 |  2 |  3 |  * |     |     |
+        // |  0 |  . |  / |
+        //
+        // BT_SEL n  = select Bluetooth profile n
+        // BT_CLR     = clear current Bluetooth profile
+        // BT_CLR_ALL = clear all Bluetooth profiles
+        // OUT_TOG    = toggle USB / Bluetooth output
         // ================================================================
         numbers_layer {
             bindings = <
+                // Row 1
                 &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &kp KP_NUMBER_7
-                &kp KP_NUMBER_8
-                &kp KP_NUMBER_9
-                &kp KP_PLUS
-                &trans       &trans
+                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS  &trans  &trans
 
-                &trans       &bt BT_CLR    &out OUT_TOG   &trans       &trans       &trans
-                &kp KP_NUMBER_4
-                &kp KP_NUMBER_5
-                &kp KP_NUMBER_6
-                &kp KP_MINUS
-                &trans       &trans
+                // Row 2
+                &trans       &bt BT_CLR    &out OUT_TOG  &trans       &trans       &trans
+                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &trans  &trans
 
-                &trans       &bt BT_CLR_ALL &trans        &trans       &trans       &trans
-                &kp KP_NUMBER_1
-                &kp KP_NUMBER_2
-                &kp KP_NUMBER_3
-                &kp KP_MULTIPLY
-                &trans       &trans
+                // Row 3
+                &trans       &bt BT_CLR_ALL &trans       &trans       &trans       &trans
+                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &trans  &trans
 
+                // Thumb row
                 &trans
                 &trans
                 &trans
