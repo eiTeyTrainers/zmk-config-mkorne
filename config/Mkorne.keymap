@@ -6,6 +6,7 @@
 #define DEFAULT 0
 #define GAMING  1
 #define NUMBERS 2
+#define SYMBOLS 3
 
 / {
     behaviors {
@@ -48,11 +49,6 @@
         //
         // Tap  = Ctrl + Alt + F11
         // Hold = NUMBERS layer
-        //
-        // NUMBERS layer contains:
-        //   - Bluetooth profile selection
-        //   - Bluetooth clear/output controls
-        //   - Numpad
         // ================================================================
         unreal_numbers: unreal_numbers {
             compatible = "zmk,behavior-hold-tap";
@@ -88,6 +84,27 @@
                 <&macro_tap &kp F14>,
                 <&to DEFAULT>;
         };
+
+        // ================================================================
+        // GAMING / SYMBOLS
+        //
+        // Tap  = enter/exit GAMING
+        // Hold = SYMBOLS layer
+        //
+        // F13 is sent first when tapping, so the PC-side overlay
+        // still detects the Gaming layer.
+        // ================================================================
+        gaming_symbols: gaming_symbols {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+
+            bindings =
+                <&mo>,
+                <&gaming_marker>;
+        };
     };
 
     keymap {
@@ -95,12 +112,6 @@
 
         // ================================================================
         // DEFAULT
-        //
-        // | ESC  | Q | W | E | R | T | Y | U | I | O | P | ENTER |
-        // | TAB  | A | S | D | F | G | H | J | K | L | ; |  '   |
-        // | SHIFT| Z | X | C | V | B | N | M | , | . | / | SHIFT |
-        //
-        //              CTRL | ALT | SPACE | UNREAL | BSPC | GAMING |
         // ================================================================
         default_layer {
             bindings = <
@@ -119,7 +130,7 @@
 
                 &unreal_numbers NUMBERS 0
                 &kp BSPC
-                &gaming_marker
+                &gaming_symbols SYMBOLS
             >;
         };
 
@@ -127,8 +138,14 @@
         // GAMING
         //
         // Gaming is TOGGLE:
-        // Press GAMING once  = enter Gaming
-        // Press GAMING again = return to Default
+        // Tap GAMING button = enter Gaming
+        // Tap GAMING button again = return to Default
+        //
+        // Arrow cluster:
+        //
+        //             I = UP
+        //
+        //         J = LEFT   K = DOWN   L = RIGHT
         // ================================================================
         gaming_layer {
             bindings = <
@@ -158,21 +175,7 @@
         //
         // LEFT SIDE = Bluetooth / output controls
         //
-        // |      | BT0 | BT1 | BT2 | BT3 | BT4 |
-        // |      | CLR | OUT |     |     |     |
-        // |      | ALL |     |     |     |     |
-        //
         // RIGHT SIDE = NUMPAD
-        //
-        // |  7 |  8 |  9 |  + |     |     |
-        // |  4 |  5 |  6 |  - |     |     |
-        // |  1 |  2 |  3 |  * |     |     |
-        // |  0 |  . |  / |
-        //
-        // BT_SEL n  = select Bluetooth profile n
-        // BT_CLR     = clear current Bluetooth profile
-        // BT_CLR_ALL = clear all Bluetooth profiles
-        // OUT_TOG    = toggle USB / Bluetooth output
         // ================================================================
         numbers_layer {
             bindings = <
@@ -196,6 +199,45 @@
                 &kp KP_NUMBER_0
                 &kp KP_DOT
                 &kp KP_DIVIDE
+            >;
+        };
+
+        // ================================================================
+        // SYMBOLS
+        //
+        // Programming symbols.
+        //
+        // Main operators:
+        //   < > = + - * / %
+        //
+        // Punctuation:
+        //   ; : ' " ` ~
+        //
+        // Other:
+        //   \ | _
+        // ================================================================
+        symbols_layer {
+            bindings = <
+                // Row 1
+                &trans       &kp LT       &kp GT       &kp EQUAL    &kp PLUS     &kp MINUS
+                &kp ASTERISK &kp SLASH    &kp PRCNT    &kp UNDERSCORE &kp BSLH    &kp PIPE
+
+                // Row 2
+                &trans       &kp SEMI     &kp COLON    &kp SQT      &kp DQT      &kp GRAVE
+                &kp TILDE    &trans       &trans       &trans       &trans       &trans
+
+                // Row 3
+                &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans
+
+                // Thumb row
+                &trans
+                &trans
+                &trans
+
+                &trans
+                &trans
+                &trans
             >;
         };
     };
