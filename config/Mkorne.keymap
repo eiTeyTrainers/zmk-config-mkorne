@@ -57,7 +57,8 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
 
-            // hold = &mo <param1>, tap = &unreal_macro
+            // Hold = &mo <param1>
+            // Tap  = &unreal_macro
             bindings = <&mo>, <&unreal_macro>;
         };
 
@@ -91,8 +92,7 @@
         // Tap  = enter/exit GAMING
         // Hold = SYMBOLS layer
         //
-        // F13 is sent first when tapping, so the PC-side overlay
-        // still detects the Gaming layer.
+        // F13 is sent first when tapping.
         // ================================================================
         gaming_symbols: gaming_symbols {
             compatible = "zmk,behavior-hold-tap";
