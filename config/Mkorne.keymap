@@ -28,26 +28,9 @@
         };
 
         // ================================================================
-        // UNREAL MACRO
+        // NUMBERS / BACKSPACE
         //
-        // Ctrl + Alt + F11
-        // ================================================================
-        unreal_macro: unreal_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&macro_press &kp LCTRL>,
-                <&macro_press &kp LALT>,
-                <&macro_tap &kp F11>,
-                <&macro_release &kp LALT>,
-                <&macro_release &kp LCTRL>;
-        };
-
-        // ================================================================
-        // UNREAL MACRO / NUMBERS
-        //
-        // Tap  = Ctrl + Alt + F11
+        // Tap  = Backspace
         // Hold = NUMBERS layer
         // ================================================================
         unreal_numbers: unreal_numbers {
@@ -58,8 +41,8 @@
             tapping-term-ms = <200>;
 
             // Hold = &mo <param1>
-            // Tap  = &unreal_macro
-            bindings = <&mo>, <&unreal_macro>;
+            // Tap  = &kp <param2>
+            bindings = <&mo>, <&kp>;
         };
 
         // ================================================================
@@ -126,7 +109,7 @@
                 &alt_lang LALT LANG1
                 &kp SPACE
 
-                &unreal_numbers NUMBERS 0
+                &unreal_numbers NUMBERS BSPC
                 &kp BSPC
                 &gaming_symbols SYMBOLS 0
             >;
