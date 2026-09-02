@@ -40,16 +40,14 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
 
-            // Hold = &mo <param1>
-            // Tap  = &kp <param2>
             bindings = <&mo>, <&kp>;
         };
 
         // ================================================================
-        // GAMING / DEFAULT LAYER MARKERS
+        // GAMING TOGGLE
         //
-        // F13/F14 are sent first so the PC-side overlay can detect
-        // the layer change.
+        // Sends F13 first so the PC-side overlay can detect the change,
+        // then toggles the GAMING layer.
         // ================================================================
         gaming_marker: gaming_marker {
             compatible = "zmk,behavior-macro";
@@ -60,22 +58,11 @@
                 <&tog GAMING>;
         };
 
-        default_marker: default_marker {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-
-            bindings =
-                <&macro_tap &kp F14>,
-                <&to DEFAULT>;
-        };
-
         // ================================================================
         // GAMING / SYMBOLS
         //
-        // Tap  = enter/exit GAMING
-        // Hold = SYMBOLS layer
-        //
-        // F13 is sent first when tapping.
+        // Tap  = toggle GAMING
+        // Hold = SYMBOLS
         // ================================================================
         gaming_symbols: gaming_symbols {
             compatible = "zmk,behavior-hold-tap";
@@ -118,9 +105,7 @@
         // ================================================================
         // GAMING
         //
-        // Gaming is TOGGLE:
-        // Tap GAMING button = enter Gaming
-        // Tap GAMING button again = return to Default
+        // Tap the bottom-right key to EXIT GAMING.
         //
         // Arrow cluster:
         //
@@ -145,7 +130,7 @@
 
                 &kp LGUI
                 &kp BSPC
-                &kp BSPC
+                &gaming_marker
             >;
         };
 
