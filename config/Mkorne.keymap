@@ -160,7 +160,7 @@
 
                 &kp LGUI
                 &kp BSPC
-                &default_marker
+                &kp BSPC
             >;
         };
 
