@@ -97,8 +97,10 @@
         gaming_symbols: gaming_symbols {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
+
             bindings = <&mo>, <&gaming_marker>;
         };
     };
@@ -126,7 +128,7 @@
 
                 &unreal_numbers NUMBERS 0
                 &kp BSPC
-                &gaming_symbols SYMBOLS
+                &gaming_symbols SYMBOLS 0
             >;
         };
 
@@ -176,16 +178,16 @@
         numbers_layer {
             bindings = <
                 // Row 1
-                &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS  &trans  &trans
+                &trans       &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4
+                &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS       &trans             &trans
 
                 // Row 2
-                &trans       &bt BT_CLR    &out OUT_TOG  &trans       &trans       &trans
-                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &trans  &trans
+                &trans       &bt BT_CLR         &out OUT_TOG       &trans             &trans             &trans
+                &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS      &trans             &trans
 
                 // Row 3
-                &trans       &bt BT_CLR_ALL &trans       &trans       &trans       &trans
-                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &trans  &trans
+                &trans       &bt BT_CLR_ALL     &trans             &trans             &trans             &trans
+                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY   &trans             &trans
 
                 // Thumb row
                 &trans
@@ -215,16 +217,16 @@
         symbols_layer {
             bindings = <
                 // Row 1
-                &trans       &kp LT       &kp GT       &kp EQUAL    &kp PLUS     &kp MINUS
-                &kp ASTERISK &kp SLASH    &kp PRCNT    &kp UNDERSCORE &kp BSLH    &kp PIPE
+                &trans       &kp LT       &kp GT       &kp EQUAL       &kp PLUS        &kp MINUS
+                &kp ASTERISK &kp SLASH    &kp PRCNT    &kp UNDERSCORE  &kp BSLH        &kp PIPE
 
                 // Row 2
-                &trans       &kp SEMI     &kp COLON    &kp SQT      &kp DQT      &kp GRAVE
-                &kp TILDE    &trans       &trans       &trans       &trans       &trans
+                &trans       &kp SEMI     &kp COLON    &kp SQT         &kp DQT         &kp GRAVE
+                &kp TILDE    &trans       &trans       &trans          &trans          &trans
 
                 // Row 3
-                &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans          &trans          &trans
+                &trans       &trans       &trans       &trans          &trans          &trans
 
                 // Thumb row
                 &trans
