@@ -20,9 +20,10 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: MKorne_left nice_view
-    snippet: zmk-usb-logging
+    shield: corne_left nice_view
+
   - board: nice_nano_v2
-    shield: MKorne_right nice_view
-    snippet: zmk-usb-logging
-  
+    shield: settings_reset
+
+  - board: nice_nano_v2
+    shield: settings_reset
