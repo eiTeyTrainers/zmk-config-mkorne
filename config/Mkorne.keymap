@@ -1,3 +1,4 @@
+```dts
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -44,12 +45,27 @@
         };
 
         // ================================================================
-        // GAMING TOGGLE
+        // ENTER GAMING
         //
         // Sends F13 first so the PC-side overlay can detect the change,
-        // then toggles the GAMING layer.
+        // then toggles the GAMING layer ON.
         // ================================================================
         gaming_marker: gaming_marker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings =
+                <&macro_tap &kp F13>,
+                <&tog GAMING>;
+        };
+
+        // ================================================================
+        // EXIT GAMING
+        //
+        // Sends F13 first so the PC-side overlay can detect the change,
+        // then toggles the GAMING layer OFF.
+        // ================================================================
+        gaming_exit: gaming_exit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -63,6 +79,8 @@
         //
         // Tap  = toggle GAMING
         // Hold = SYMBOLS
+        //
+        // Used ONLY on the DEFAULT layer.
         // ================================================================
         gaming_symbols: gaming_symbols {
             compatible = "zmk,behavior-hold-tap";
@@ -83,14 +101,14 @@
         // ================================================================
         default_layer {
             bindings = <
-                &kp ESC       &kp Q       &kp W       &kp E       &kp R       &kp T
-                &kp Y         &kp U       &kp I       &kp O       &kp P       &kp ENTER
+                &kp ESC       &kp Q        &kp W        &kp E        &kp R        &kp T
+                &kp Y         &kp U        &kp I        &kp O        &kp P        &kp ENTER
 
-                &kp TAB       &kp A       &kp S       &kp D       &kp F       &kp G
-                &kp H         &kp J       &kp K       &kp L       &kp SEMI     &kp SQT
+                &kp TAB       &kp A        &kp S        &kp D        &kp F        &kp G
+                &kp H         &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
 
-                &kp LSHFT     &kp Z       &kp X       &kp C       &kp V       &kp B
-                &kp N         &kp M       &kp COMMA    &kp DOT      &kp SLASH    &kp RSHFT
+                &kp LSHFT     &kp Z        &kp X        &kp C        &kp V        &kp B
+                &kp N         &kp M        &kp COMMA    &kp DOT      &kp SLASH    &kp RSHFT
 
                 &kp LCTRL
                 &alt_lang LALT LANG1
@@ -105,7 +123,7 @@
         // ================================================================
         // GAMING
         //
-        // Tap the bottom-right key to EXIT GAMING.
+        // Bottom-right key exits Gaming and returns to DEFAULT.
         //
         // Arrow cluster:
         //
@@ -130,7 +148,7 @@
 
                 &kp LGUI
                 &kp BSPC
-                &gaming_marker
+                &gaming_exit
             >;
         };
 
@@ -208,3 +226,4 @@
         };
     };
 };
+```
