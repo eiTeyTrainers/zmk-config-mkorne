@@ -226,39 +226,49 @@
                 &trans
                 &trans
 
-                &kp KP_NUMBER_0
+                // "0" can't live on the Numbers-activation key itself - that
+                // switch is already held down to get here, so it can never
+                // be pressed again. Moved one key over; "/" is still one key
+                // away since the slot next to it already falls through to
+                // Default's "/" key.
+                &trans
                 &kp KP_DOT
-                &kp KP_DIVIDE
+                &kp KP_NUMBER_0
             >;
         };
 
         // ================================================================
         // SYMBOLS
         //
-        // Programming symbols.
+        // Placement is ranked by hand comfort, not alphabetically:
         //
-        // Main operators:
-        //   < > = + - * / %
+        // Tier 1 (home row, zero extra travel) - the highest-frequency pair
+        // on each hand:
+        //   ( )   { }
         //
-        // Punctuation:
-        //   ; : ' " ` ~
+        // Tier 2 (one row off home, index/middle fingers):
+        //   < >   [ ]
         //
-        // Other:
-        //   \ | _
+        // Tier 3 (one row off home, index finger):
+        //   !     &
+        //
+        // Everything else is unchanged or reshuffled into the columns the
+        // tiered symbols vacated. Both physical Shift keys (Row 3's outer
+        // columns) are left untouched.
         // ================================================================
         symbols_layer {
             bindings = <
                 // Row 1
-                &trans       &kp LT       &kp GT       &kp EQUAL       &kp PLUS        &kp MINUS
-                &kp ASTERISK &kp SLASH    &kp PRCNT    &kp UNDERSCORE  &kp BSLH        &kp PIPE
+                &trans       &kp EQUAL    &kp PLUS     &kp LT          &kp GT          &kp MINUS
+                &kp ASTERISK &kp LBKT     &kp RBKT     &kp UNDERSCORE  &kp BSLH        &kp PIPE
 
                 // Row 2
-                &trans       &kp SEMI     &kp COLON    &kp SQT         &kp DQT         &kp GRAVE
-                &kp TILDE    &trans       &trans       &trans          &trans          &trans
+                &trans       &kp SEMI     &kp COLON    &kp LPAR        &kp RPAR        &kp GRAVE
+                &kp TILDE    &kp LBRC     &kp RBRC     &kp SQT         &kp DQT         &trans
 
                 // Row 3
-                &trans       &trans       &trans       &trans          &trans          &trans
-                &trans       &trans       &trans       &trans          &trans          &trans
+                &trans       &trans       &trans       &trans          &kp EXCL        &trans
+                &trans       &kp AMPS     &kp PRCNT    &trans          &trans          &trans
 
                 // Thumb row
                 &trans
